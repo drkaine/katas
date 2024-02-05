@@ -1,0 +1,27 @@
+name: Pipeline-CI
+
+on:
+  push:
+    branches: 
+      - '*'
+
+jobs:
+  ci-back:
+    runs-on: ubuntu-latest
+    continue-on-error: false
+
+    steps:
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - uses: actions/checkout@v2
+
+      - name: Install composer Dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Run Unit tests
+        run: vendor/bin/pest
+      
+      - name: PHP-CS-FIXER
+        run: vendor/bin/php-cs-fixer fix --dry-run
