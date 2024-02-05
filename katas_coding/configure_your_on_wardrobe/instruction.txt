@@ -1,0 +1,65 @@
+Lien => https://kata-log.rocks/clock-in-kata
+
+Clock-in kata
+Practice writing (tests with) Promises. Or simply practice writing asynchronous tests, without making them slow. In this case there are two async operations combined in different ways those operations are the XHR and the GPS retrieval. Each of them takes a while. In JavaScript asynchronous programming can be done via callbacks, Promises or various async libraries. In other languages this might be handled in a different way.
+
+The challenge here is
+
+to make the asynchronous code readable and
+NOT use any timeouts, make the tests fast and
+to handle all edge cases properly, which might get tricky ones async calls get parallelized and return errors.
+What is the task?
+A time tracking tool, that optionally also accepts GPS positions. Implement the collecting of all GPS data (using promises) and sending to the server using some asynchronous method, like XHR or fetch (using promises too). Implement a clockIn() function that returns a promise and works as the diagrams below show.
+
+Or in other words: the “boss” can determine
+
+if only times shall be tracked, without any GPS position recoding (one async action, the XHR) or
+GPS can be optionally added to the XHR data to be sent, getting GPS is async too,
+require GPS data to be sent with the XHR
+Where to start?
+start with case 1), the simplest
+mock/stub the actual XHR and build all cases incl. error cases that might happen when sending an XHR
+mock/stub the GPS-data retreival, implement case 2), watch out there are multiple execution paths
+case 3) incl. retrying should be a piece of cake now
+prevent that any test times out, ensure that all Promise-paths are tested
+Next steps
+If you want to get more challenging you can go the next steps like this:
+
+search for a library that makes testing with Promises easier
+use one or many library to find out which one suites best your needs
+mock that getting retreiving GPS data takes very long, trigger a time out and report it to the user
+write tests that verify the timing of the things happening, e.g. that the clock-in call NEVER starts before the gps-retreival had finished
+For some code feel free to have a look at the original repo.
+
+FR
+
+Kata de pointage
+Pratiquez l'écriture (de tests avec) des Promises. Ou pratiquez simplement l'écriture de tests asynchrones, sans les rendre lents. Dans ce cas, deux opérations asynchrones sont combinées de différentes manières, ces opérations sont la requête XHR et la récupération GPS. Chacune d'entre elles prend un certain temps. En JavaScript, la programmation asynchrone peut être réalisée via des rappels (callbacks), des Promises ou diverses bibliothèques asynchrones. Dans d'autres langages, cela pourrait être géré d'une manière différente.
+
+Le défi ici est
+
+de rendre le code asynchrone lisible et
+de NE PAS utiliser de délais, rendre les tests rapides et
+de gérer correctement tous les cas limites, ce qui peut devenir délicat lorsque des appels asynchrones sont parallélisés et renvoient des erreurs.
+Quelle est la tâche ?
+Un outil de suivi du temps, qui accepte éventuellement également des positions GPS. Implémentez la collecte de toutes les données GPS (en utilisant des Promises) et l'envoi au serveur à l'aide d'une méthode asynchrone, comme XHR ou fetch (en utilisant également des Promises). Implémentez une fonction clockIn() qui renvoie une Promise et fonctionne comme le montrent les diagrammes ci-dessous.
+
+Ou en d'autres termes : le "patron" peut déterminer
+
+si seuls les temps doivent être suivis, sans enregistrement de position GPS (une action asynchrone, la requête XHR) ou
+GPS peut éventuellement être ajouté aux données XHR à envoyer, l'obtention du GPS est également asynchrone,
+exiger que les données GPS soient envoyées avec la requête XHR
+Par où commencer ?
+commencez par le cas 1), le plus simple
+simulez/substituez le véritable XHR et construisez tous les cas, y compris les cas d'erreur qui pourraient survenir lors de l'envoi d'un XHR
+simulez/substituez la récupération des données GPS, mettez en œuvre le cas 2), soyez attentif car il existe plusieurs chemins d'exécution
+le cas 3), y compris la réessayabilité, devrait être un jeu d'enfant maintenant
+empêchez tout test de dépasser la limite de temps, assurez-vous que tous les chemins de Promise sont testés
+Étapes suivantes
+Si vous souhaitez relever un défi supplémentaire, vous pouvez passer aux étapes suivantes de la manière suivante :
+
+recherchez une bibliothèque qui facilite les tests avec les Promises
+utilisez une ou plusieurs bibliothèques pour découvrir celle qui correspond le mieux à vos besoins
+simulez le fait que la récupération des données GPS prend beaucoup de temps, déclenchez une expiration du délai et signalez-la à l'utilisateur
+écrivez des tests qui vérifient la synchronisation des événements, par exemple, que l'appel clock-in NE démarre JAMAIS avant que la récupération GPS ne soit terminée
+Pour voir du code, n'hésitez pas à jeter un coup d'œil au dépôt original.

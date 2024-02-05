@@ -1,0 +1,38 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day24/challenge.md
+
+Day 24: The celebration night.
+Your last battle was a full victory, and you are ready to celebrate with your kingdom. A big celebration is being prepared.
+
+Today is about indulgence, excess and feast.
+
+On today's challenge, the last thing you want is to think about your craft and as such, the point of the exercise is to increase complexity of the code.
+
+Yes, you heard right.
+
+Using the Crappy-Driven Development technique, you have to make your code the crappiest possible.
+
+"The secret art of making yourself indispensable by writing crappy code !!!"
+
+Challenge of day 24: Write the most complicated code you can.
+
+💡HINT: Your IDE can also help you write difficult code.
+
+FR
+
+Jour 24 : La nuit de la célébration.
+
+Votre dernière bataille a été une victoire totale, et vous êtes prêt à célébrer avec votre royaume. Une grande fête est en préparation.
+
+Aujourd'hui, c'est l'indulgence, l'excès et la fête.
+
+Le défi d'aujourd'hui est de vous laisser aller, d'augmenter la complexité du code.
+
+Oui, vous avez bien entendu.
+
+En utilisant la technique du Développement Crappy-Driven, vous devez rendre votre code aussi médiocre que possible.
+
+"L'art secret de vous rendre indispensable en écrivant du code pourri !!!"
+
+Défi du jour 24 : Écrivez le code le plus compliqué possible.
+
+💡CONSEIL : Votre IDE peut également vous aider à écrire du code difficile.

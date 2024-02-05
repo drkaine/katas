@@ -1,0 +1,91 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day08/challenge.md
+
+Day 8: Your first TDD adventure.
+Today your journey takes you on your first TDD adventure. You will need to secure your ship.
+
+The task of today is to design a password verification program.
+
+The password verification program will take a password as an argument and the password will be valid only if all these conditions are correct:
+
+Contains at least 8 characters
+Contains at least one capital letter
+Contains at least one lowercase letter
+Contains at least a number
+Contains at least a special character in this list . * # @ $ % &.
+Any other characters are not authorized.
+In this program, the only thing that matters is to know if the password is valid. Not why it is not.
+
+Nevertheless, for the magic to work properly, you will need to follow the TDD rules. 🧙‍♂️
+
+The TDD rules are quite simple:
+
+- Write production code only to pass a failing unit test.
+- Write no more of a unit test than sufficient to fail (compilation failures are failures).
+- Write no more production code than necessary to pass the one failing unit test.
+A gentle reminder, the steps to use the TDD magic can be applied this way:
+
+🔴 Write a failing test
+
+🟢 Make the test pass
+
+🔵 Refactor your code
+The magic will continue to work only with one condition: if at any time, your tests are not passing, you need to revert your latest change.
+
+The only exception to the previous rule is if you are using a double loop system. As shown below:
+
+TDD Double Loop
+
+Are you ready?
+
+Challenge of day 8: Using TDD rules, write a password validation program.
+
+May your crafting journey bring you new lights!
+
+💡HINT1: The project is empty, so you'll have to auto-generate your code from a test class.
+💡HINT2: Start with the easiest behavior to write a test for (Baby Step).
+
+FR
+
+Jour 8 : Votre première aventure TDD.
+Aujourd'hui, votre voyage vous emmène dans votre première aventure TDD. Vous devrez sécuriser votre navire.
+
+La tâche d'aujourd'hui consiste à concevoir un programme de vérification de mot de passe.
+
+Le programme de vérification de mot de passe prendra un mot de passe en argument et le mot de passe ne sera valide que si toutes ces conditions sont remplies :
+
+- Contient au moins 8 caractères
+- Contient au moins une lettre majuscule
+- Contient au moins une lettre minuscule
+- Contient au moins un chiffre
+- Contient au moins un caractère spécial dans cette liste . * # @ $ % &.
+- Aucun autre caractère n'est autorisé.
+Dans ce programme, la seule chose qui importe est de savoir si le mot de passe est valide. Pas pourquoi il ne l'est pas.
+
+Néanmoins, pour que la magie fonctionne correctement, vous devrez suivre les règles du TDD. 🧙‍♂️
+
+Les règles du TDD sont assez simples :
+
+- Écrivez du code de production uniquement pour réussir un test unitaire qui échoue.
+- N'écrivez pas plus d'un test unitaire que nécessaire pour échouer (les erreurs de compilation sont des échecs).
+- N'écrivez pas plus de code de production que nécessaire pour réussir le seul test unitaire qui échoue.
+Un rappel amical, les étapes pour utiliser la magie du TDD peuvent être appliquées de la manière suivante :
+
+🔴 Écrivez un test qui échoue
+
+🟢 Faites passer le test
+
+🔵 Refactorez votre code
+La magie continuera de fonctionner à une seule condition : si à un moment donné, vos tests ne passent pas, vous devez revenir en arrière sur votre dernière modification.
+
+La seule exception à la règle précédente est si vous utilisez un système de double boucle. Comme indiqué ci-dessous :
+
+Système de Double Boucle TDD
+
+Êtes-vous prêt ?
+
+Défi du jour 8 : En utilisant les règles du TDD, écrivez un programme de validation de mot de passe.
+
+Puissiez-vous trouver de nouvelles lumières lors de votre voyage d'artisanat !
+
+💡INDICE 1 : Le projet est vide, vous devrez donc générer automatiquement votre code à partir d'une classe de test.
+💡INDICE 2 : Commencez par le comportement le plus facile pour lequel écrire un test (Baby Step).

@@ -1,0 +1,17 @@
+Lien => https://kata-log.rocks/trip-service-kata
+
+Your Task
+The objective is to test and refactor the legacy TripService class. The end result should be well-crafted code that expresses the domain. We do not need tests for collaborators (right now), we want to test only the logic contained in the TripService class.
+
+Rules
+We can’t change any existing code if not covered by tests. We can’tafford to break any existing behavior.
+The only exception is if we need to change the code to add unit tests, but in this case, just automated refactorings (via IDE) are allowed.
+
+FR
+
+Votre tâche
+L'objectif est de tester et de refactoriser la classe TripService héritée. Le résultat final devrait être un code bien conçu qui exprime le domaine. Nous n'avons pas besoin de tests pour les collaborateurs (pour l'instant), nous voulons tester uniquement la logique contenue dans la classe TripService.
+
+Règles
+Nous ne pouvons pas changer de code existant s'il n'est pas couvert par des tests. Nous ne pouvons pas nous permettre de casser un comportement existant.
+La seule exception est si nous devons modifier le code pour ajouter des tests unitaires, mais dans ce cas, seuls les refactorings automatisés (via l'EDI) sont autorisés.

@@ -1,0 +1,57 @@
+Lien => https://kata-log.rocks/gilded-rose-kata
+
+Introduction
+Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a prominent city ran by a friendly innkeeper named Allison. We also buy and sell only the finest goods. Unfortunately, our goods are constantly degrading in quality as they approach their sell by date. We have a system in place that updates our inventory for us. It was developed by a no-nonsense type named Leeroy, who has moved on to new adventures. Your task is to add the new feature to our system so that we can begin selling a new category of items. First an introduction to our system:
+
+All items have a SellIn value which denotes the number of days we have to sell the item
+All items have a Quality value which denotes how valuable the item is
+At the end of each day our system lowers both values for every item
+Pretty simple, right? Well this is where it gets interesting:
+
+Once the sell by date has passed, Quality degrades twice as fast
+The Quality of an item is never negative
+“Aged Brie” actually increases in Quality the older it gets
+The Quality of an item is never more than 50
+“Sulfuras”, being a legendary item, never has to be sold or decreases in Quality
+“Backstage passes”, like aged brie, increases in Quality as its SellIn value approaches;
+Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but
+Quality drops to 0 after the concert
+Your Task
+We have recently signed a supplier of conjured items. This requires an update to our system:
+
+“Conjured” items degrade in Quality twice as fast as normal items
+Rules
+Feel free to make any changes to the UpdateQuality method and add any new code as long as everything still works correctly. However, do not alter the Item class or Items property as those belong to the goblin in the corner who will insta-rage and one-shot you as he doesn’t believe in shared code ownership (you can make the UpdateQuality method and Items property static if you like, we’ll cover for you).
+
+Just for clarification, an item can never have its Quality increase above 50, however “Sulfuras” is a legendary item and as such its Quality is 80 and it never alters.
+
+(Taken from the github repo)
+
+FR
+
+Introduction
+Salut et bienvenue dans l'équipe Gilded Rose. Comme vous le savez, nous sommes une petite auberge idéalement située dans une ville renommée, dirigée par une aubergiste sympathique nommée Allison. Nous achetons et vendons uniquement les meilleurs produits. Malheureusement, nos produits se dégradent constamment en qualité à mesure qu'ils approchent de leur date de vente. Nous avons un système en place qui met à jour notre inventaire pour nous. Il a été développé par un individu sans fioritures nommé Leeroy, qui est parti vers de nouvelles aventures. Votre tâche est d'ajouter la nouvelle fonctionnalité à notre système afin que nous puissions commencer à vendre une nouvelle catégorie d'articles. Tout d'abord, une introduction à notre système :
+
+Tous les articles ont une valeur SellIn qui indique le nombre de jours que nous avons pour vendre l'article.
+Tous les articles ont une valeur de qualité qui indique la valeur de l'article.
+À la fin de chaque jour, notre système diminue les deux valeurs pour chaque article.
+Assez simple, non ? Eh bien, c'est là que ça devient intéressant :
+
+Une fois que la date de vente est passée, la qualité diminue deux fois plus vite.
+La qualité d'un article ne devient jamais négative.
+"Àged Brie" augmente réellement en qualité plus il vieillit.
+La qualité d'un article ne dépasse jamais 50.
+"Sulfuras", étant un objet légendaire, n'a jamais besoin d'être vendu et ne diminue jamais en qualité.
+Les "Passes backstage", comme le fromage vieilli, augmentent en qualité à mesure que leur valeur de vente approche ;
+La qualité augmente de 2 lorsqu'il reste 10 jours ou moins et de 3 lorsqu'il reste 5 jours ou moins, mais
+La qualité tombe à 0 après le concert.
+Votre tâche
+Nous avons récemment signé avec un fournisseur d'articles enchantés. Cela nécessite une mise à jour de notre système :
+
+Les articles "Conjured" se dégradent en qualité deux fois plus rapidement que les articles normaux.
+Règles
+N'hésitez pas à apporter des modifications à la méthode UpdateQuality et à ajouter tout nouveau code tant que tout fonctionne correctement. Cependant, ne modifiez pas la classe Item ou la propriété Items, car elles appartiennent au gobelin dans le coin qui entrera en rage instantanée et vous éliminera d'un coup, car il ne croit pas en la propriété partagée du code (vous pouvez rendre la méthode UpdateQuality et la propriété Items statiques si vous le souhaitez, nous vous couvrirons).
+
+Juste pour clarification, la qualité d'un article ne peut jamais augmenter au-dessus de 50, cependant "Sulfuras" est un objet légendaire et en tant que tel, sa qualité est de 80 et ne change jamais.
+
+(Extrait du dépôt GitHub)

@@ -1,0 +1,29 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day02/challenge.md
+
+Day 2: Fight indentation.
+On the second day of your crafting journey, you are to meet your first fizzbuzz code. You probably know this piece of code and yet there is so much in it to unpack.
+
+Today though your task is but a simple one: reducing the complexity of the code by removing as much indentation as you can.
+
+Remember that a developer never forgets his craft. He just adds to it.
+
+Challenge of day 2: Your code can only have one level of indentation.
+
+May your journey continue!
+
+💡HINT: Apply what you learned on day 1
+
+FR
+
+Jour 2 : Luttez contre l'indentation.
+Le deuxième jour de votre voyage d'artisanat vous réserve votre premier code fizzbuzz. Vous connaissez probablement ce morceau de code, et pourtant il y a tellement à en comprendre.
+
+Aujourd'hui, votre tâche est pourtant simple : réduire la complexité du code en supprimant autant d'indentations que possible.
+
+N'oubliez pas qu'un développeur n'oublie jamais son art. Il y ajoute simplement.
+
+Défi du jour 2 : Votre code ne peut avoir qu'un seul niveau d'indentation.
+
+Que votre voyage se poursuive !
+
+💡INDICE : Appliquez ce que vous avez appris le jour 1.

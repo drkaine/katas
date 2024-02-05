@@ -1,0 +1,37 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day10/challenge.md
+
+Day 10: Love your code without conditions.
+Today, you are still repairing codes. You've been fighting faulty loops. And you realize there might be more to it than you thought possible.
+
+Maybe, you can go one step further and try to also remove unwanted conditions.
+
+You will take the code of day 6 and applied what you've learned to a new level.
+
+The point of today's exercise is to ask ourselves a simple question:
+
+What is my code trying to achieve?
+
+Challenge of day 10: Dot not use "if" statement.
+
+May your crafting journey continue!
+
+💡HINT: Think of the commonality in your conditions.
+
+FR
+
+Jour 10 : Aimez votre code sans conditions.
+Aujourd'hui, vous réparez encore des codes. Vous avez combattu des boucles défectueuses. Et vous réalisez qu'il pourrait y avoir plus que ce que vous pensiez possible.
+
+Peut-être pouvez-vous aller plus loin et essayer de supprimer également des conditions non désirées.
+
+Vous prendrez le code du jour 6 et appliquerez ce que vous avez appris à un nouveau niveau.
+
+Le point de l'exercice d'aujourd'hui est de nous poser une question simple :
+
+Qu'est-ce que mon code essaie d'accomplir ?
+
+Défi du jour 10 : Ne pas utiliser l'instruction "if".
+
+Puissiez-vous poursuivre votre voyage d'artisanat !
+
+💡INDICE : Pensez à la similitude dans vos conditions.

@@ -1,0 +1,23 @@
+Lien => https://kata-log.rocks/tell-dont-ask-kata
+
+Goal
+A legacy refactor kata, focused on the violation of the tell don’t ask principle and the anemic domain model.
+
+Description
+Here you find a simple order flow application. It’s able to create orders, do some calculation (totals and taxes), and manage them (approval/reject and shipment).
+
+The old development team did not find the time to build a proper domain model but instead preferred to use a procedural style, building this anemic domain model. Fortunately, they did at least take the time to write unit tests for the code.
+
+Your new CTO, after many bugs caused by this application, asked you to refactor this code to make it more maintainable and reliable.
+
+FR
+
+Objetif
+Un kata de refactoring d'un code existant, axé sur la violation du principe "tell don’t ask" (dis ne demande pas, dis plutôt) et le modèle de domaine anémique.
+
+Description
+Vous trouverez ici une application simple de gestion de commandes. Elle est capable de créer des commandes, de faire des calculs (totaux et taxes) et de les gérer (approbation/refus et expédition).
+
+L'ancienne équipe de développement n'a pas trouvé le temps de construire un modèle de domaine approprié, mais a préféré utiliser un style procédural, en construisant ce modèle de domaine anémique. Heureusement, ils ont au moins pris le temps d'écrire des tests unitaires pour le code.
+
+Votre nouveau directeur technique, après de nombreux bugs causés par cette application, vous a demandé de refactorer ce code pour le rendre plus maintenable et fiable.

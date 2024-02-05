@@ -1,0 +1,37 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day12/challenge.md
+
+Day 12: Planning for the future.
+Today, the journey will demand us to plan, to think of the future as we advance into challenging territories.
+
+As you gather new knowledge and techniques, one thing remains: change.
+
+Code that works are not always the best to maintain. Therefore, an occasional analysis and refactoring are sometimes needed.
+
+Today's exercise is about finding another approach, another design for your code. Something that will make your code better compatible with new demands.
+
+You may work your refactoring as far as you'd like, but remember the mantra: Your tests shall never fail...
+
+Challenge of day 12: Make your code open for extension.
+
+May your crafting journey be smooth!
+
+💡HINT: Your previous tests can't fail if you are testing a new method.
+
+FR
+
+Jour 12 : Planifier pour l'avenir.
+Aujourd'hui, le voyage demandera de nous de planifier, de penser à l'avenir alors que nous avançons dans des territoires challengers.
+
+Alors que vous rassemblez de nouvelles connaissances et techniques, une chose reste constante : le changement.
+
+Les codes qui fonctionnent ne sont pas toujours les meilleurs à maintenir. Par conséquent, une analyse et une refonte occasionnelles sont parfois nécessaires.
+
+L'exercice d'aujourd'hui consiste à trouver une autre approche, un autre design pour votre code. Quelque chose qui rendra votre code mieux compatible avec de nouvelles exigences.
+
+Vous pouvez pousser votre refactoring aussi loin que vous le souhaitez, mais n'oubliez pas le mantra : Vos tests ne doivent jamais échouer...
+
+Défi du jour 12 : Rendez votre code ouvert à l'extension.
+
+Puissiez-vous poursuivre votre voyage d'artisanat en toute fluidité !
+
+💡INDICE : Vos tests précédents ne peuvent pas échouer si vous testez une nouvelle méthode.

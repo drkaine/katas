@@ -1,0 +1,19 @@
+Lien => https://kata-log.rocks/tennis-kata
+
+Tennis Kata
+There are four versions of this refactoring kata, each with their own design smells and challenges:
+
+TennisGame1
+TennisGame2
+TennisGame3
+TennisGame4
+
+FR
+
+Kata du Tennis
+Il existe quatre versions de ce kata de refactoring, chacune avec ses propres odeurs de conception et défis :
+
+TennisGame1
+TennisGame2
+TennisGame3
+TennisGame4

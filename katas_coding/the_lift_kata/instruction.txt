@@ -1,0 +1,52 @@
+Lien => https://kata-log.rocks/lift-kata
+
+The Lift Kata
+Since lifts are everywhere and they contain software, how easy would it be to write a basic one? Let’s TDD a lift, starting with simple behaviors and working toward complex ones. Assume good input from calling code and concentrate on the main flow.
+
+Here are some suggested lift features:
+
+a lift responds to calls containing a source floor and direction
+a lift has an attribute floor, which describes it’s current location
+a lift delivers passengers to requested floors
+you may implement current floor monitor
+you may implement direction arrows
+you may implement doors (opening and closing)
+you may implement DING!
+there can be more than one lift
+Starting Points
+C++, C#, Clojure, D, Elixir, F#, Go, Haskell, Java, JavaScript, Kotlin, PHP, Python, ReScript, Ruby, Rust, Scala, TypeScript
+
+Clojure, CoffeeScript, C++, C#, Erlang, Groovy, Intercal, Java, JavaScript, Lisp, PHP, Ruby, Scala
+
+Advanced Requirements
+a lift does not respond immediately. consider options to simulate time, possibly a tick method.
+lift calls are queued, and executed only as the lift passes a floor
+Objects Only
+Can you write a lift that does not need to be queried? Try writing a lift that only sends messages to other objects.
+
+FR
+
+Le Kata de l'Ascenseur
+Étant donné que les ascenseurs sont présents partout et qu'ils contiennent du logiciel, à quel point serait-il facile d'écrire un ascenseur de base ? Faisons du TDD pour créer un ascenseur, en commençant par des comportements simples et en progressant vers des comportements plus complexes. Supposons une bonne entrée de la part du code appelant et concentrons-nous sur le flux principal.
+
+Voici quelques fonctionnalités suggérées pour l'ascenseur :
+
+- un ascenseur répond aux appels contenant un étage source et une direction,
+- un ascenseur a un attribut "étage" qui décrit sa position actuelle,
+- un ascenseur transporte les passagers vers les étages demandés,
+- vous pouvez implémenter un moniteur d'étage actuel,
+- vous pouvez implémenter des flèches de direction,
+- vous pouvez implémenter des portes (ouverture et fermeture),
+- vous pouvez implémenter "DING !" (le son),
+- il peut y avoir plus d'un ascenseur.
+
+Points de départ
+C++, C#, Clojure, D, Elixir, F#, Go, Haskell, Java, JavaScript, Kotlin, PHP, Python, ReScript, Ruby, Rust, Scala, TypeScript
+
+Clojure, CoffeeScript, C++, C#, Erlang, Groovy, Intercal, Java, JavaScript, Lisp, PHP, Ruby, Scala
+
+Exigences avancées
+Un ascenseur ne répond pas immédiatement. Considérez des options pour simuler le temps, éventuellement avec une méthode de "tick".
+Les appels d'ascenseur sont mis en file d'attente et ne sont exécutés que lorsque l'ascenseur passe un étage.
+Objets uniquement
+Pouvez-vous écrire un ascenseur qui n'a pas besoin d'être interrogé ? Essayez d'écrire un ascenseur qui envoie uniquement des messages à d'autres objets.

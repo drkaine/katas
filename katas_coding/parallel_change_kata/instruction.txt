@@ -1,0 +1,23 @@
+Lien => https://kata-log.rocks/parallel-change-kata
+
+Your Task
+Change the class ShoppingCart in the package field.
+
+The class should be handle multiple int items instead of a single one.
+
+Tests have already been written.
+
+Rules
+The tests must not be red at any time. No compile-errors, no failures. (The only exception is for a few seconds while you write a single line of code.)
+
+FR
+
+Votre tâche
+Modifiez la classe ShoppingCart dans le package field.
+
+La classe doit gérer plusieurs éléments de type int au lieu d'un seul.
+
+Les tests ont déjà été écrits.
+
+Règles
+Les tests ne doivent jamais être en échec. Pas d'erreurs de compilation, pas d'échecs. (La seule exception est pendant quelques secondes pendant que vous écrivez une seule ligne de code.)

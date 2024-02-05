@@ -1,0 +1,19 @@
+Lien => https://kata-log.rocks/sing-a-song-kata
+
+The “Situation”
+Code to produce a popular children’s nursery rhyme was produced by a web agency for the customer last year. The customer now desires to produce multiple different versions of the song using the same structure but based on different themes, for example a current popular children’s movie featuring a cast of animals. The customer asks that you make the song configurable for different lists of animals. The customer cannot guarantee that there will be the same number of animals in each different version.
+
+No documentation or tests were provided by the previous developer.
+
+Your Task
+Refactor the code to allow for the customer’s needs. Remember: refactoring can only be done in the presence of tests that are passing, and after refactoring the tests still pass!
+
+FR
+
+La "Situation"
+Un code pour produire une comptine populaire pour enfants a été réalisé par une agence web pour le client l'année dernière. Le client souhaite maintenant produire plusieurs versions différentes de la chanson en utilisant la même structure mais basée sur des thèmes différents, par exemple, un film populaire pour enfants actuel mettant en scène une distribution d'animaux. Le client vous demande de rendre la chanson configurable pour différentes listes d'animaux. Le client ne peut pas garantir qu'il y aura le même nombre d'animaux dans chaque version différente.
+
+Aucune documentation ni tests n'ont été fournis par le développeur précédent.
+
+Votre tâche
+Refactorez le code pour répondre aux besoins du client. Rappelez-vous : la refacturation ne peut être effectuée qu'en présence de tests qui réussissent, et après la refacturation, les tests réussissent toujours !

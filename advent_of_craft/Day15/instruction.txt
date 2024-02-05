@@ -1,0 +1,36 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day15/challenge.md
+
+Day 15: Protect your refactoring.
+Today, as your journey is continuing, you feel a storm brewing. You need to protect your crew at all costs.
+
+Today's exercise is about protecting your code. How can you protect your code from changes.
+
+You will need to change it, adapt it but how can you make sure it never breaks.
+
+Remember a golden rule to be 100% confident in any refactoring:
+
+Your code needs to be tested
+
+Challenge of day 15: Put a code under tests.
+
+May you be protected on your crafting journey!
+
+💡HINT: How can I maximize my coverage.
+
+FR
+
+Jour 15 : Protégez votre refactoring.
+
+Aujourd'hui, alors que votre voyage continue, vous sentez un orage se préparer. Vous devez protéger votre équipage à tout prix.
+
+L'exercice du jour concerne la protection de votre code. Comment pouvez-vous protéger votre code contre les changements ? Vous devrez le modifier, l'adapter, mais comment pouvez-vous vous assurer qu'il ne se casse jamais ?
+
+Rappelez-vous d'une règle d'or pour être à 100 % confiant dans tout refactoring :
+
+Votre code doit être testé.
+
+Défi du jour 15 : Mettez un code sous tests.
+
+Puissiez-vous être protégé dans votre voyage d'artisanat !
+
+💡 INDICE : Comment puis-je maximiser ma couverture de tests ?

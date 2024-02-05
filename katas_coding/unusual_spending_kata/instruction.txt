@@ -1,0 +1,41 @@
+Lien => https://kata-log.rocks/unusual-spending-kata
+
+Description
+You work at a credit card company and as a value-add they want to start providing alerts to users when their spending in any particular category is higher than usual.
+
+A Payment is a simple value object with a price, description, and category
+A Category is an enumerable type of a collection of things like “entertainment”, “restaurants”, and “golf”
+For a given userId, fetch the payments for the current month and the previous month
+Compare the total amount paid for the each month, grouped by category; filter down to the categories for which the user spent at least 50% more this month than last month
+Compose an e-mail message to the user that lists the categories for which spending was unusually high, with a subject like “Unusual spending of $1076 detected!” and this body:
+Hello card user!
+
+We have detected unusually high spending on your card in these categories:
+
+* You spent $148 on groceries
+* You spent $928 on travel
+
+Love,
+
+The Credit Card Company
+
+FR
+
+Description
+Vous travaillez dans une société de cartes de crédit et, en tant que valeur ajoutée, ils veulent commencer à fournir des alertes aux utilisateurs lorsque leurs dépenses dans une catégorie particulière sont plus élevées que d'habitude.
+
+Un Payment est un simple objet de valeur avec un prix, une description et une catégorie.
+Une Category est un type énumérable d'une collection de choses comme "divertissement", "restaurants" et "golf".
+Pour un userId donné, récupérez les paiements du mois en cours et du mois précédent.
+Comparez le montant total payé pour chaque mois, regroupé par catégorie ; filtrez les catégories pour lesquelles l'utilisateur a dépensé au moins 50% de plus ce mois-ci que le mois dernier.
+Composez un message électronique à l'utilisateur qui répertorie les catégories pour lesquelles les dépenses étaient anormalement élevées, avec un sujet comme "Détection de dépenses inhabituelles de 1076 $ !", et ce corps :
+Bonjour utilisateur de carte !
+
+Nous avons détecté des dépenses inhabituellement élevées sur votre carte dans ces catégories :
+
+* Vous avez dépensé 148 $ pour l'épicerie
+* Vous avez dépensé 928 $ pour les voyages
+
+Avec amour,
+
+La société de cartes de crédit

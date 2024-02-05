@@ -1,0 +1,194 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day21/challenge.md
+
+Day 21: Changing tides.
+Today, you are still fighting and while the main storm passed you are still not out of danger yet!
+
+You will need to reach the nearby island quickly to recover since your ship is badly broken.
+
+Today's exercise is about fixing tests and fixing code.
+
+A refactoring is needed but a first step needs to be made in the tests.
+
+Challenge of day 21: Refactor the tests and production code to Output-Based tests.
+
+Before refactoring the code, here are some explanations regarding the different kind of tests as explained by Vladimir Khorikov in his book Unit Testing Principles, Practices and Patterns..
+
+Different styles of tests
+State-Based
+class StateBasedTests {
+    @Test
+    void it_should_add_given_product_to_the_order() {
+        val product = new Product("Free Guy");
+        val sut = new Order();
+
+        sut.add(product);
+
+        // Verify the state
+        assertThat(sut.getProducts())
+                .hasSize(1)
+                .allMatch(item -> item.equals(product));
+    }
+
+    @AllArgsConstructor
+    class Product {
+        private final String name;
+    }
+
+    class Order {
+        private final List<Product> products = new ArrayList<>();
+
+        List<Product> getProducts() {
+            return Collections.unmodifiableList(products);
+        }
+
+        void add(Product product) {
+            products.add(product);
+        }
+    }
+}
+State-Based
+
+Output-Based
+class OutputBasedTests {
+    @Test
+    void discount_of_2_products_should_be_2_percent() {
+        val product1 = new Product("Kaamelott");
+        val product2 = new Product("Free Guy");
+
+        // Call on the SUT (here PriceEngine)
+        // No side effects -> Pure function
+        val discount = PriceEngine.calculateDiscount(product1, product2);
+
+        assertThat(discount).isEqualTo(0.02);
+    }
+}
+Output-Based
+
+Communication-Based
+class CommunicationBasedTests {
+    @Test
+    void greet_a_user_should_send_an_email_to_it() {
+        final var email = "john.doe@email.com";
+        final var emailGatewayMock = mock(EmailGateway.class);
+        // Substitute collaborators with Test Double
+        final var sut = new Controller(emailGatewayMock);
+
+        sut.greetUser(email);
+
+        // Verify that the SUT calls those collaborators correctly
+        verify(emailGatewayMock, times(1)).sendGreetingsEmail(email);
+    }
+
+    interface EmailGateway {
+        Try<String> sendGreetingsEmail(String email);
+    }
+
+    @AllArgsConstructor
+    class Controller {
+        private final EmailGateway emailGateway;
+
+        public Try<String> greetUser(String email) {
+            return emailGateway.sendGreetingsEmail(email);
+        }
+    }
+}
+
+FR
+
+Jour 21 : Marées changeantes.
+
+Aujourd'hui, vous continuez à vous battre, et bien que la principale tempête soit passée, vous n'êtes toujours pas hors de danger !
+
+Vous devrez atteindre rapidement l'île voisine pour récupérer, car votre navire est gravement endommagé.
+
+L'exercice d'aujourd'hui consiste à réparer les tests et le code.
+
+Une refonte est nécessaire, mais une première étape doit être entreprise dans les tests.
+
+Défi du jour 21 : Refactorer les tests et le code de production en tests basés sur les résultats (Output-Based tests).
+
+Avant de refondre le code, voici quelques explications sur les différents types de tests, comme expliqué par Vladimir Khorikov dans son livre "Unit Testing Principles, Practices and Patterns".
+
+Styles différents de tests
+State-Based (basé sur l'état)
+```java
+class StateBasedTests {
+    @Test
+    void it_should_add_given_product_to_the_order() {
+        val product = new Product("Free Guy");
+        val sut = new Order();
+
+        sut.add(product);
+
+        // Vérifier l'état
+        assertThat(sut.getProducts())
+                .hasSize(1)
+                .allMatch(item -> item.equals(product));
+    }
+
+    @AllArgsConstructor
+    class Product {
+        private final String name;
+    }
+
+    class Order {
+        private final List<Product> products = new ArrayList<>();
+
+        List<Product> getProducts() {
+            return Collections.unmodifiableList(products);
+        }
+
+        void add(Product product) {
+            products.add(product);
+        }
+    }
+}
+```
+
+Output-Based (basé sur la sortie)
+```java
+class OutputBasedTests {
+    @Test
+    void discount_of_2_products_should_be_2_percent() {
+        val product1 = new Product("Kaamelott");
+        val product2 = new Product("Free Guy");
+
+        // Appel sur le SUT (ici PriceEngine)
+        // Pas d'effets secondaires -> Fonction pure
+        val discount = PriceEngine.calculateDiscount(product1, product2);
+
+        assertThat(discount).isEqualTo(0.02);
+    }
+}
+```
+
+Communication-Based (basé sur la communication)
+```java
+class CommunicationBasedTests {
+    @Test
+    void greet_a_user_should_send_an_email_to_it() {
+        final var email = "john.doe@email.com";
+        final var emailGatewayMock = mock(EmailGateway.class);
+        // Substituer les collaborateurs par un Double de Test
+        final var sut = new Controller(emailGatewayMock);
+
+        sut.greetUser(email);
+
+        // Vérifier que le SUT appelle correctement ces collaborateurs
+        verify(emailGatewayMock, times(1)).sendGreetingsEmail(email);
+    }
+
+    interface EmailGateway {
+        Try<String> sendGreetingsEmail(String email);
+    }
+
+    @AllArgsConstructor
+    class Controller {
+        private final EmailGateway emailGateway;
+
+        public Try<String> greetUser(String email) {
+            return emailGateway.sendGreetingsEmail(email);
+        }
+    }
+}
+```

@@ -1,0 +1,46 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day23/challenge.md
+
+Day 23: The last battle.
+Today, the ship protection held and you are back to your homeland.
+
+Only to see your castle occupied, your land dotted with an army. The legacy code army!
+
+You are by yourself and your crew, and you will need to fight with all that you've learned and put up an appropriate defense.
+
+Today's exercise is the all-in-one challenge.
+
+You have to use all your crafts to refactor the code.
+
+Some rules:
+
+Your production code cannot be refactored unless it's 100% tested.
+The production code may only be touched with automated IDE action.
+You may test if your tests are consistent with mutation testing.
+Challenge of day 23: Refactor the code after putting it under test.
+
+💡HINT: Work with the smallest scenario to test.
+
+
+FR
+
+Jour 23 : La dernière bataille.
+
+Aujourd'hui, la protection du navire a tenu bon et vous êtes de retour dans votre patrie.
+
+Pour constater que votre château est occupé, vos terres parsemées d'une armée. L'armée du code hérité !
+
+Vous êtes seul avec votre équipage, et vous devrez combattre avec tout ce que vous avez appris pour ériger une défense appropriée.
+
+L'exercice d'aujourd'hui est le défi ultime.
+
+Vous devez utiliser toutes vos compétences pour refactoriser le code.
+
+Quelques règles :
+
+- Votre code de production ne peut pas être refactoré tant qu'il n'est pas à 100 % testé.
+- Le code de production ne peut être modifié qu'avec des actions automatisées de l'IDE.
+- Vous pouvez tester si vos tests sont cohérents avec le test de mutation.
+
+Défi du jour 23 : Refactorisez le code après l'avoir mis sous test.
+
+💡CONSEIL : Travaillez avec le scénario le plus simple pour le tester.

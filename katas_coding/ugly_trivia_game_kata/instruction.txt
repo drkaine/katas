@@ -1,0 +1,23 @@
+Lien => https://kata-log.rocks/ugly-trivia-kata
+
+Golden Master
+We can’t write reasonable unit tests without refactorings first. But we don’t want to refactor without tests at all.
+
+But we can test the application as a whole. Gain control over all external input sources (RNGs, system time, keyboard input and so on). Then save all outputs produced (console output, emails sent, files changed etc). This is our Golden Master.
+
+Now we can change the code and compare if it still yields the same results as before.
+
+Free Fall
+This is another thing to try out. And probably it’s a good idea to not learn this in production. Just use your IDE refactorings. Do not waste time to understand the code. Trust your IDE and use features like extract method or invert if statement. You will be surprised about the results.
+
+FR
+
+Master d'Or
+Nous ne pouvons pas écrire des tests unitaires raisonnables sans refactorisation au préalable. Cependant, nous ne voulons pas du tout refactoriser sans tests.
+
+Mais nous pouvons tester l'application dans son ensemble. Prenez le contrôle de toutes les sources d'entrée externes (générateurs de nombres aléatoires, heure système, entrée clavier, etc.). Enregistrez ensuite toutes les sorties produites (sortie console, e-mails envoyés, fichiers modifiés, etc.). C'est notre Master d'Or.
+
+Maintenant, nous pouvons changer le code et vérifier s'il produit toujours les mêmes résultats qu'auparavant.
+
+Chute libre
+C'est une autre chose à essayer. Et probablement, il est préférable de ne pas apprendre cela en production. Utilisez simplement les refactorings de votre IDE. Ne perdez pas de temps à comprendre le code. Faites confiance à votre IDE et utilisez des fonctionnalités telles que l'extraction de méthode ou l'inversion des instructions if. Vous serez surpris des résultats.

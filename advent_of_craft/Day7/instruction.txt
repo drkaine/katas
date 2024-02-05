@@ -1,0 +1,37 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day07/challenge.md
+
+Day 7: Extract to conquer.
+Today is the last day of the first week of your journey. Your ship as good as new. You are ready to take on new challenges.
+
+You've learned than extracting methods can help you avoid complexity.
+
+Well, today, you are ready to use your newly found craft techniques to improve this code.
+
+No obstacles should block your way by the end of today but beware! The code base is significantly bigger than the last ones.
+
+What is my code trying to achieve?
+
+Challenge of day 7: Simplify the run method by extracting the right behavior.
+
+May your crafting journey bring new challenges!
+
+💡HINT: Use all the techniques you've learned this week.
+
+FR
+
+Jour 7 : Extraire pour conquérir.
+Aujourd'hui est le dernier jour de la première semaine de votre voyage. Votre navire est comme neuf. Vous êtes prêt à relever de nouveaux défis.
+
+Vous avez appris que l'extraction de méthodes peut vous aider à éviter la complexité.
+
+Eh bien, aujourd'hui, vous êtes prêt à utiliser vos nouvelles techniques d'artisanat pour améliorer ce code.
+
+Aucun obstacle ne devrait bloquer votre chemin d'ici la fin de la journée, mais attention ! La base de code est significativement plus grande que les précédentes.
+
+Qu'est-ce que mon code essaie d'accomplir ?
+
+Défi du jour 7 : Simplifiez la méthode run en extrayant le bon comportement.
+
+Puissiez-vous relever de nouveaux défis lors de votre voyage d'artisanat !
+
+💡INDICE : Utilisez toutes les techniques que vous avez apprises cette semaine.

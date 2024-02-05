@@ -1,0 +1,38 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day18/challenge.md
+
+Day 18: Prevent design failure.
+Today, you ship is almost ready to depart for the last days. As you are calling your crew, a feeling of insecurity is creeping.
+
+You decide to double-check everything onboard before leaving.
+
+Today's exercise is about challenging the design of your code but mostly to be proactive at it.
+
+You actually don't like to refactor a code that could be avoided in the first place.
+
+Would that be nice to do it automatically?
+
+Day 18: Automatically detect Linguistic Anti-Patterns (LAP).
+
+May your crafting journey be sound!
+
+💡HINT: Read the ArchUnit documentation for Java.
+
+FR
+
+Jour 18 : Éviter les échecs de conception.
+
+Aujourd'hui, votre navire est presque prêt à partir pour les derniers jours. Alors que vous appelez votre équipage, un sentiment d'insécurité s'insinue.
+
+Vous décidez de vérifier tout à bord avant de partir.
+
+L'exercice du jour consiste à remettre en question la conception de votre code, mais surtout à être proactif à ce sujet.
+
+Vous n'aimez vraiment pas refactoriser un code qui aurait pu être évité dès le départ.
+
+Ne serait-ce pas bien de le faire automatiquement ?
+
+Jour 18 : Détecter automatiquement les anti-modèles linguistiques (LAP).
+
+Puissent votre voyage d'artisanat être sain !
+
+💡 INDICE : Lisez la documentation d'ArchUnit pour Java.

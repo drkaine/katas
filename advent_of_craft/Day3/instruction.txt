@@ -1,0 +1,37 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day03/challenge.md
+
+Day 3: Work on cognition.
+Third day of your journey. Today, we keep working on simplifying a code but the approach is different. Think of what is cognitively better.
+
+The code you are about to embark is simple, yet something makes it hard to read it at first.
+
+While not overly difficult, today is about housekeeping. Today is about doing the extra effort to make a code more maintainable.
+
+Remember what the old developers say...
+
+A code can always be improved.
+
+Challenge of day 3: One dot per line.
+
+May the crafting journey continue!
+
+💡HINT: Be consistent with your formatting rules!
+
+FR
+
+Jour 3 : Travaillez sur la cognition.
+Troisième jour de votre voyage. Aujourd'hui, nous continuons à simplifier un code, mais l'approche est différente. Pensez à ce qui est cognitivement meilleur.
+
+Le code sur lequel vous vous apprêtez à travailler est simple, mais quelque chose le rend difficile à lire au premier abord.
+
+Bien que cela ne soit pas excessivement difficile, aujourd'hui consiste à faire du ménage. Aujourd'hui consiste à fournir un effort supplémentaire pour rendre un code plus maintenable.
+
+Rappelez-vous ce que disent les anciens développeurs...
+
+Un code peut toujours être amélioré.
+
+Défi du jour 3 : Un point par ligne.
+
+Que le voyage d'artisanat continue !
+
+💡INDICE : Soyez cohérent avec vos règles de formatage !

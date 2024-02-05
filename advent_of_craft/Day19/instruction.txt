@@ -1,0 +1,38 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day19/challenge.md
+
+Day 19: Loosing up dead weight.
+Today, you embark on the last few days of your journey. You have been warned a big storm is brewing your way but home you go.
+
+You will need to leave up extra weight and tighten up the ship for the days to come.
+
+The exercise of today deals with exception, again.
+
+You are starting to know the formula. No more exceptions.
+
+This time, the approach might be a bit different.
+
+Challenge of day 19: No more exception authorized - use a custom Error.
+
+May your crafting journey continue!
+
+💡HINT: What object can you return to get the error state?
+
+FR
+
+Jour 19 : Alléger la charge inutile.
+
+Aujourd'hui, vous embarquez pour les derniers jours de votre voyage. On vous a averti qu'une grosse tempête se prépare sur votre chemin, mais vous rentrez chez vous.
+
+Vous devrez laisser tomber le poids supplémentaire et resserrer le navire pour les jours à venir.
+
+L'exercice d'aujourd'hui concerne à nouveau les exceptions.
+
+Vous commencez à connaître la formule. Plus d'exceptions.
+
+Cette fois, l'approche pourrait être un peu différente.
+
+Défi du jour 19 : Plus aucune exception autorisée - utilisez une erreur personnalisée.
+
+Puissent votre voyage d'artisanat se poursuivre !
+
+💡 INDICE : Quel objet pouvez-vous retourner pour obtenir l'état d'erreur ?

@@ -1,0 +1,9 @@
+Lien => https://kata-log.rocks/yahtzee-kata
+
+Yatzy Kata
+The game of Yatzy is a simple dice game. A deliberately poor solution is available and it must be refactored.
+
+FR
+
+Yatzy Kata
+Le jeu de Yatzy est un simple jeu de dés. Une solution délibérément médiocre est disponible et elle doit être refactorée.

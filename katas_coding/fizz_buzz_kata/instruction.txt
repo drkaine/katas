@@ -1,0 +1,27 @@
+Lien => https://kata-log.rocks/fizz-buzz-kata
+
+Your task
+Write a program that prints one line for each number from 1 to 100
+Usually just print the number itself.
+For multiples of three print Fizz instead of the number
+For the multiples of five print Buzz instead of the number
+For numbers which are multiples of both three and five print FizzBuzz instead of the number
+🥶 Code Freeze Edition 🥶
+You can also do this Kata as the Lapps in the arctic north are doing it for centuries ❄️🦌
+For multiples of three: print `Kuksa!` instead of the number
+For the multiples of five: print `Sauna!` instead of the number
+For numbers which are multiples of both three and five: print `Dip!` instead of the number
+
+FR
+
+Votre tâche
+Écrivez un programme qui imprime une ligne pour chaque nombre de 1 à 100
+Normalement, imprimez simplement le nombre lui-même.
+Pour les multiples de trois, imprimez Fizz à la place du nombre.
+Pour les multiples de cinq, imprimez Buzz à la place du nombre.
+Pour les nombres qui sont des multiples de trois et de cinq, imprimez FizzBuzz à la place du nombre.
+🥶 Édition Code Gelé 🥶
+Vous pouvez également faire cette kata comme le font les Lapps dans le nord arctique depuis des siècles ❄️🦌
+Pour les multiples de trois : imprimez `Kuksa!` à la place du nombre.
+Pour les multiples de cinq : imprimez `Sauna!` à la place du nombre.
+Pour les nombres qui sont des multiples de trois et de cinq : imprimez `Dip!` à la place du nombre.

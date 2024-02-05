@@ -1,0 +1,99 @@
+Lien => https://kata-log.rocks/string-calculator-kata
+
+Incremental Kata - no peeping ahead!
+This is an incremental kata to simulate a real business situation: work your way through the steps in order, but do not read the next requirement before you have finished your current one.
+Step 1
+Create a simple String calculator with a method signature:
+
+    int Add(string numbers)
+The method can take up to two numbers, separated by commas, and will return their sum.
+
+For example “” or “1” or “1,2” as inputs.
+
+For an empty string it will return 0.
+
+Step 2
+Allow the Add method to handle an unknown amount of numbers.
+
+Step 3
+Allow the Add method to handle new lines between numbers (instead of commas):
+
+The following input is ok: “1\n2,3” (will equal 6)
+
+The following input is NOT ok: “1,\n” (not need to prove it - just clarifying)
+
+Step 4
+Support different delimiters:
+
+To change a delimiter, the beginning of the string will contain a separate line that looks like this: “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’.
+
+The first line is optional. All existing scenarios should still be supported.
+
+Step 5
+Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.
+
+If there are multiple negatives, show all of them in the exception message.
+
+Step 6
+Numbers bigger than 1000 should be ignored, so adding 2 + 1001 = 2
+
+Step 7
+Delimiters can be of any length with the following format: “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6.
+
+Step 8
+Allow multiple delimiters like this: “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.
+
+Step 9
+Make sure you can also handle multiple delimiters with length longer than one char.
+
+FR
+
+Kata incrémental - pas de triche à l'avance !
+Il s'agit d'un kata incrémental pour simuler une situation commerciale réelle : progressez à travers les étapes dans l'ordre, mais ne lisez pas la prochaine exigence avant d'avoir terminé la précédente.
+
+Étape 1
+Créez une simple calculatrice de chaîne avec une signature de méthode :
+
+```csharp
+int Add(string numbers)
+```
+
+La méthode peut prendre jusqu'à deux nombres, séparés par des virgules, et retournera leur somme.
+
+Par exemple, "" ou "1" ou "1,2" comme entrées.
+
+Pour une chaîne vide, elle retournera 0.
+
+Étape 2
+Permettez à la méthode Add de gérer un nombre inconnu de nombres.
+
+Étape 3
+Permettez à la méthode Add de gérer des sauts de ligne entre les nombres (au lieu de virgules) :
+
+L'entrée suivante est correcte : "1\n2,3" (donnera 6)
+
+L'entrée suivante N'est PAS correcte : "1,\n" (pas besoin de le prouver - simplement pour clarifier)
+
+Étape 4
+Prenez en charge différents délimiteurs :
+
+Pour changer un délimiteur, le début de la chaîne contiendra une ligne distincte qui ressemble à ceci : "//[délimiteur]\n[nombres...]" par exemple "//;\n1;2" devrait retourner trois où le délimiteur par défaut est ';'.
+
+La première ligne est facultative. Tous les scénarios existants doivent toujours être pris en charge.
+
+Étape 5
+Appeler Add avec un nombre négatif lèvera une exception "negatives not allowed" - et le négatif qui a été passé.
+
+S'il y a plusieurs négatifs, les montrer tous dans le message d'exception.
+
+Étape 6
+Les nombres supérieurs à 1000 doivent être ignorés, donc l'addition de 2 + 1001 = 2.
+
+Étape 7
+Les délimiteurs peuvent avoir n'importe quelle longueur avec le format suivant : "//[délimiteur]\n", par exemple : "//[***]\n1***2***3" devrait retourner 6.
+
+Étape 8
+Permettez plusieurs délimiteurs comme ceci : "//[delim1][delim2]\n", par exemple "//[*][%]\n1*2%3" devrait retourner 6.
+
+Étape 9
+Assurez-vous que vous pouvez également gérer plusieurs délimiteurs ayant une longueur supérieure à un caractère.

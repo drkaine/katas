@@ -1,0 +1,44 @@
+Lien => https://github.com/advent-of-craft/advent-of-craft/blob/main/docs/exercise/day20/challenge.md
+
+Day 20: A game of dice.
+Today, you are hitting the storm and it's much bigger than anticipated.
+
+You have to navigate carefully in order to avoid the worst of it. A simple mistake can be costly.
+
+Today's exercise is about insuring safe states in your main logic.
+
+You now know how to remove exception but ensuring a safe state is another thing.
+
+It's all about protection of your code
+
+Challenge of day 20: No more exceptions in our domain.
+
+You are not allowed to extend the output of the methods (by returning a monadic container) as yesterday... You need to find another way to solve it 🤔
+
+May your crafting journey be safe!
+
+💡HINT: What triggers the unsafe state here?
+To better understand the game rules we invite you to take a look them here.
+
+FR
+
+Jour 20 : Un jeu de dés.
+
+Aujourd'hui, vous affrontez la tempête et elle est beaucoup plus grande que prévu.
+
+Vous devez naviguer avec prudence pour éviter le pire. Une simple erreur peut être coûteuse.
+
+L'exercice d'aujourd'hui concerne l'assurance de l'état sécurisé dans votre logique principale.
+
+Vous savez maintenant comment supprimer les exceptions, mais assurer un état sûr en est une autre.
+
+C'est tout au sujet de la protection de votre code
+
+Défi du jour 20 : Plus d'exceptions dans notre domaine.
+
+Vous n'avez pas le droit d'étendre la sortie des méthodes (en retournant un conteneur monadique) comme hier... Vous devez trouver une autre façon de résoudre cela 🤔
+
+Puissent votre voyage d'artisanat être sûr !
+
+💡 INDICE : Qu'est-ce qui déclenche l'état non sécurisé ici ?
+Pour mieux comprendre les règles du jeu, nous vous invitons à les consulter ici.
