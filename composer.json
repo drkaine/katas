@@ -4,8 +4,22 @@
         "friendsofphp/php-cs-fixer": "^3.49"
     },
     "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Advent\\": "advent_of_craft/",
+            "Katas\\": "katas_of_craft/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     }
 }
