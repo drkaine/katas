@@ -17,7 +17,11 @@ class Account
 
 	public function withdraw(int $amount): void
 	{
-		$this->balance -= $amount;
+		if (0 < $amount) {
+			$this->balance -= $amount;
+		} else {
+			$this->balance += $amount;
+		}
 	}
 
 	public function getBalance(): int
