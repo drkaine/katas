@@ -15,7 +15,7 @@ class Game
 		$strike = false;
 		$number_of_frames = count($this->frames);
 
-		for ($i = 0; $number_of_frames > $i; $i = $i + 2) {
+		for ($i = 0; $number_of_frames > $i && 20 > $i; $i = $i + 2) {
 			if ($bonus) {
 				$score += $this->frames[$i];
 				$bonus = false;
