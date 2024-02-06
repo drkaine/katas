@@ -6,11 +6,13 @@ namespace Katas\banking_kata;
 
 class Account
 {
-	private int $balance;
+	private int $balance = 0;
 
 	public function deposit(int $amount): void
 	{
-		$this->balance = $amount;
+		if (0 < $amount) {
+			$this->balance = $amount;
+		}
 	}
 
 	public function getBalance(): int
