@@ -28,6 +28,12 @@ class Account
 		} else {
 			$this->balance += $amount;
 		}
+
+		$this->movements[] = [
+			'Date' => date('d.m.Y'),
+			'Amount' => '-' . abs($amount),
+			'Balance' => $this->balance,
+		];
 	}
 
 	public function printStatement(): string
