@@ -42,9 +42,4 @@ class Account
 
 		return $statement;
 	}
-
-	public function getBalance(): int
-	{
-		return $this->balance;
-	}
 }
