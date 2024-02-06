@@ -6,15 +6,34 @@ namespace Katas\bowling_game_kata;
 
 class Game
 {
-	private int $score = 0;
+	private array $frames = [];
 
 	public function score(): int
 	{
-		return $this->score;
+		$score = 0;
+		$bonus = true;
+
+		for ($i = 0; count($this->frames) > $i; $i = $i + 2) {
+			$score += $this->frames[$i];
+
+			if ($i + 1 < count($this->frames)) {
+				$score += $this->frames[$i + 1];
+
+				if ($this->frames[$i + 1] + $this->frames[$i] === 10) {
+					$bonus = true;
+				}
+			}
+
+			if ($bonus && $i + 2 < count($this->frames)) {
+				$score += $this->frames[$i + 2];
+			}
+		}
+
+		return $score;
 	}
 
 	public function roll(int $number_of_pins): void
 	{
-		$this->score += $number_of_pins;
+		$this->frames[] = $number_of_pins;
 	}
 }

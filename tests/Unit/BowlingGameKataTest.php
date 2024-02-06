@@ -16,3 +16,10 @@ test('score with one pins', function (): void {
 	$this->game->roll(1);
 	expect($this->game->score())->toBe(1);
 });
+
+test('score with a spare and 9 pins on the third frames', function (): void {
+	$this->game->roll(1);
+	$this->game->roll(9);
+	$this->game->roll(9);
+	expect($this->game->score())->toBe(28);
+});
