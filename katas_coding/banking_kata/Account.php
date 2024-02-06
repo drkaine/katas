@@ -12,6 +12,8 @@ class Account
 	{
 		if (0 < $amount) {
 			$this->balance += $amount;
+		} else {
+			$this->balance -= $amount;
 		}
 	}
 

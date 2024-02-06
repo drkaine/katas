@@ -15,7 +15,7 @@ test('deposit 500', function (): void {
 
 test('deposit -500', function (): void {
 	$this->account->deposit(-500);
-	expect($this->account->getBalance())->toBe(0);
+	expect($this->account->getBalance())->toBe(500);
 });
 
 test('withdraw 100', function (): void {
