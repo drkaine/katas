@@ -12,15 +12,11 @@ class Account
 
 	public function deposit(int $amount): void
 	{
-		if (0 < $amount) {
-			$this->balance += $amount;
-		} else {
-			$this->balance -= $amount;
-		}
+		$this->balance += abs($amount);
 
 		$this->movements[] = [
 			'Date' => date('d.m.Y'),
-			'Amount' => '+' . $amount,
+			'Amount' => '+' . abs($amount),
 			'Balance' => $this->balance,
 		];
 	}
