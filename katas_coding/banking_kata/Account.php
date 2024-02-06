@@ -23,11 +23,7 @@ class Account
 
 	public function withdraw(int $amount): void
 	{
-		if (0 < $amount) {
-			$this->balance -= $amount;
-		} else {
-			$this->balance += $amount;
-		}
+		$this->balance -= abs($amount);
 
 		$this->movements[] = [
 			'Date' => date('d.m.Y'),
