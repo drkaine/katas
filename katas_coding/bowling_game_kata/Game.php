@@ -11,21 +11,21 @@ class Game
 	public function score(): int
 	{
 		$score = 0;
-		$bonus = true;
+		$bonus = $this->haveBonus(0);
+		$number_of_frames = count($this->frames);
 
-		for ($i = 0; count($this->frames) > $i; $i = $i + 2) {
-			$score += $this->frames[$i];
-
-			if ($i + 1 < count($this->frames)) {
-				$score += $this->frames[$i + 1];
-
-				if ($this->frames[$i + 1] + $this->frames[$i] === 10) {
-					$bonus = true;
-				}
+		for ($i = 0; $number_of_frames > $i; $i = $i + 2) {
+			if ($bonus) {
+				$score += $this->frames[$i];
+				$bonus = false;
 			}
 
-			if ($bonus && $i + 2 < count($this->frames)) {
-				$score += $this->frames[$i + 2];
+			$score += $this->frames[$i];
+
+			if ($i + 1 < $number_of_frames) {
+				$score += $this->frames[$i + 1];
+
+				$bonus = $this->haveBonus($this->frames[$i + 1] + $this->frames[$i]);
 			}
 		}
 
@@ -35,5 +35,10 @@ class Game
 	public function roll(int $number_of_pins): void
 	{
 		$this->frames[] = $number_of_pins;
+	}
+
+	private function haveBonus(int $score): bool
+	{
+		return (bool) (10 === $score);
 	}
 }
