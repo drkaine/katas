@@ -11,3 +11,8 @@ beforeEach(function (): void {
 test('score without roll', function (): void {
 	expect($this->game->score())->toBe(0);
 });
+
+test('score with one pins', function (): void {
+	$this->game->roll(1);
+	expect($this->game->score())->toBe(1);
+});
