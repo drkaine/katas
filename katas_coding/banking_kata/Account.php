@@ -11,7 +11,7 @@ class Account
 	public function deposit(int $amount): void
 	{
 		if (0 < $amount) {
-			$this->balance = $amount;
+			$this->balance += $amount;
 		}
 	}
 
