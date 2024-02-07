@@ -28,8 +28,26 @@ class Game
 
 	private function addInScore(int $number_of_pins): void
 	{
+		$this->addBonus($number_of_pins);
+
 		$this->score += $number_of_pins;
 
+		$last_frame = count($this->frames) !== 0 ? $this->frames[count($this->frames) - 1] : -1;
+
+		if ($this->isBonus($number_of_pins)) {
+			$this->frames[] = 0;
+			$this->strike = 2;
+		}
+
+		if ($this->isBonus($number_of_pins + $last_frame)) {
+			$this->spare = true;
+		}
+
+		$this->frames[] = $number_of_pins;
+	}
+
+	private function addBonus(int $number_of_pins): void
+	{
 		if ($this->spare) {
 			$this->score += $number_of_pins;
 			$this->spare = false;
@@ -39,22 +57,10 @@ class Game
 			$this->score += $number_of_pins;
 			$this->strike --;
 		}
-
-		$last_frame = count($this->frames) !== 0 ? $this->frames[count($this->frames) - 1] : -1;
-		if ($this->haveBonus($number_of_pins)) {
-			$this->frames[] = 0;
-			$this->strike = 2;
-		}
-
-		if ($this->haveBonus($number_of_pins + $last_frame)) {
-			$this->spare = true;
-		}
-
-		$this->frames[] = $number_of_pins;
 	}
 
-	private function haveBonus(int $score): bool
+	private function isBonus(int $number_of_pins): bool
 	{
-		return (bool) (10 === $score);
+		return (bool) (10 === $number_of_pins);
 	}
 }
