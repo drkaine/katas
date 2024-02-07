@@ -21,7 +21,7 @@ class Game
 
 	public function roll(int $number_of_pins): void
 	{
-		if (count($this->frames) < 20) {
+		if (count($this->frames) < 20 || $this->strike) {
 			$this->addInScore($number_of_pins);
 
 			$this->haveBonus($number_of_pins);
