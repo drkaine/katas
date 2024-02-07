@@ -10,54 +10,47 @@ class Game
 
 	private int $score = 0;
 
+	private bool $spare = false;
+
+	private int $strike = 0;
+
 	public function score(): int
 	{
-		$this->calculScore();
-
 		return $this->score;
 	}
 
 	public function roll(int $number_of_pins): void
 	{
-		$this->frames[] = $number_of_pins;
-
-		if (10 === $number_of_pins) {
-			$this->roll(0);
+		if (count($this->frames) < 20) {
+			$this->addInScore($number_of_pins);
 		}
 	}
 
-	private function calculScore(): void
+	private function addInScore(int $number_of_pins): void
 	{
-		$bonus = false;
-		$strike = false;
-		$number_of_frames = count($this->frames);
+		$this->score += $number_of_pins;
 
-		for ($i = 0; $number_of_frames > $i && 20 > $i; $i = $i + 2) {
-			if ($bonus) {
-				$this->score += $this->frames[$i];
-				$bonus = false;
-			}
-
-			$this->score += $this->frames[$i];
-
-			if (10 === $this->frames[$i]) {
-				$strike = true;
-
-				continue;
-			}
-
-			if ($i + 1 < $number_of_frames) {
-
-				if ($strike) {
-					$this->score += $this->frames[$i + 1] + $this->frames[$i];
-					$strike = false;
-				}
-
-				$this->score += $this->frames[$i + 1];
-
-				$bonus = $this->haveBonus($this->frames[$i + 1] + $this->frames[$i]);
-			}
+		if ($this->spare) {
+			$this->score += $number_of_pins;
+			$this->spare = false;
 		}
+
+		if (0 < $this->strike) {
+			$this->score += $number_of_pins;
+			$this->strike --;
+		}
+
+		$last_frame = count($this->frames) !== 0 ? $this->frames[count($this->frames) - 1] : -1;
+		if ($this->haveBonus($number_of_pins)) {
+			$this->frames[] = 0;
+			$this->strike = 2;
+		}
+
+		if ($this->haveBonus($number_of_pins + $last_frame)) {
+			$this->spare = true;
+		}
+
+		$this->frames[] = $number_of_pins;
 	}
 
 	private function haveBonus(int $score): bool
