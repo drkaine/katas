@@ -10,9 +10,11 @@ class Game
 
 	private int $score = 0;
 
+	private int $strike = 0;
+
 	private bool $spare = false;
 
-	private int $strike = 0;
+	private bool $extra = false;
 
 	public function score(): int
 	{
@@ -21,7 +23,7 @@ class Game
 
 	public function roll(int $number_of_pins): void
 	{
-		if (count($this->frames) < 20 || ($this->strike && count($this->frames) < 22)) {
+		if ($this->haveRoll()) {
 			$this->addInScore($number_of_pins);
 
 			$this->haveBonus($number_of_pins);
@@ -62,6 +64,15 @@ class Game
 		if ($this->giveBonus($number_of_pins + $last_frame)) {
 			$this->spare = true;
 		}
+	}
+
+	private function haveRoll(): bool
+	{
+		if ($this->strike && count($this->frames) < 22) {
+			return true;
+		}
+
+		return (bool) (count($this->frames) < 20);
 	}
 
 	private function giveBonus(int $number_of_pins): bool
