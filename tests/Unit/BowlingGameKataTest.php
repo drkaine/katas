@@ -67,7 +67,7 @@ test('score limit at 10 frames', function (): void {
 	expect($this->game->score())->toBe(20);
 });
 
-test('score with 3 roll cause of strike', function (): void {
+test('score with 2 last roll are strike and have roll 1 extra time', function (): void {
 	$this->game->roll(1);
 	$this->game->roll(1);
 
@@ -97,8 +97,9 @@ test('score with 3 roll cause of strike', function (): void {
 
 	$this->game->roll(1);
 	$this->game->roll(10);
+	$this->game->roll(10);
 
-	$this->game->roll(1);
+	$this->game->roll(10);
 
-	expect($this->game->score())->toBe(31);
+	expect($this->game->score())->toBe(49);
 });
