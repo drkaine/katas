@@ -1,52 +1,37 @@
-Lien => https://kata-log.rocks/bugs-zero-kata
+lien => https://kata-log.rocks/christmas-lights-kata
 
-BugsZero Kata
-Practice refactoring code to repel bugs.
+Incremental Kata - no peeping ahead!
+This is an incremental kata to simulate a real business situation: work your way through the steps in order, but do not read the next requirement before you have finished your current one.
+Probably a Fire Hazard
+Because your neighbors keep defeating you in the holiday house decorating contest year after year, you’ve decided to deploy one million lights in a 1000x1000 grid. Furthermore, because you’ve been especially nice this year, Santa has mailed you instructions on how to display the ideal lighting configuration.Lights in your grid are numbered from 0 to 999 in each direction; the lights at each corner are at 0,0, 0,999, 999,999, and 999,0. The instructions include whether to turn on, turn off, or toggle various inclusive ranges given as coordinate pairs. Each coordinate pair represents opposite corners of a rectangle, inclusive; a coordinate pair like 0,0 through 2,2 therefore refers to 9 lights in a 3x3 square. The lights all start turned off. To defeat your neighbors this year, all you have to do is set up your lights by doing the instructions Santa sent you in order.
 
-Bugs get their way into the code because the design allows it. Bugs are not a fatality and finding ways to improve the design is a very powerful way of keeping them away from our code.
+Examples
+turn on 0,0 through 999,999 would turn on (or leave on) every light.
+toggle 0,0 through 999,0 would toggle the first line of 1000 lights, turning off the ones that were on, and turning on the ones that were off.
+turn off 499,499 through 500,500 would turn off (or leave off) the middle four lights.
+Instructions
+turn on 887,9 through 959,629
+turn on 454,398 through 844,448
+turn off 539,243 through 559,965
+turn off 370,819 through 676,868
+turn off 145,40 through 370,997
+turn off 301,3 through 808,453
+turn on 351,678 through 951,908
+toggle 720,196 through 897,994
+toggle 831,394 through 904,860
+After following the instructions, how many lights are lit?
 
-You can think of this dojo like a Poka-Yoke training, understand and fix the root cause of the bugs.
+Part Two
+You just finish implementing your winning light pattern when you realize you mistranslated Santa’s message from Ancient Nordic Elvish. The light grid you bought actually has individual brightness controls; each light can have a brightness of zero or more. The lights all start at zero.
 
-What is the task?
-Trivia from the legacy code retreat is a good codebase to start this with. There are a few bugs in the code and a few weaknesses in the design to fix. By a weakness we mean that it’d be easy for a developer to introduce a certain type of bug while working with the code. Your job is to change the design so that it is either impossible or at least much less likely that that kind of bug would be introduced.
+The phrase turn on actually means that you should increase the brightness of those lights by 1.
+The phrase turn off actually means that you should decrease the brightness of those lights by 1, to a minimum of zero.
+The phrase toggle actually means that you should increase the brightness of those lights by 2.
+What is the total brightness of all lights combined after following Santa’s instructions?
 
-Where to start?
-Pick any of the listed problems
+For example:
 
-A Game could have less than two players - make sure it always has at least two.
-Use a compiled language or a static type checker like flowtype
-A Game could have 7 players, make it have at most 6.
-or slightly easier allow for 7 players or more
-A player that get’s into prison always stays there
-Other than just fixing the bug, try to understand what’s wrong with the design and fix the root cause
-The deck could run out of questions
-Make sure that can’t happen (a deck with 1 billion questions is cheating :)
-Introducing new categories of questions seems like tricky business.
-Could you make sure all places have the “right” question and that the distribution is always correct?
-Similarly changing the board size greatly affects the questions distribution
-
+turn on 0,0 through 0,0 would increase the total brightness by 1.
+toggle 0,0 through 999,999 would increase the total brightness by 2000000.
 
 FR
-
-BugsZero Kata est une pratique de refactoring de code visant à repousser les bugs.
-
-Les bugs s'insinuent dans le code en raison de sa conception. Les bugs ne sont pas une fatalité, et trouver des moyens d'améliorer la conception est un moyen puissant de les éloigner de notre code.
-
-Cette kata peut être comparée à un entraînement Poka-Yoke, où l'objectif est de comprendre et de corriger la cause profonde des bugs.
-
-Quelle est la tâche ?
-La Trivia du code hérité est une bonne base pour commencer. Il y a quelques bugs dans le code et quelques faiblesses de conception à corriger. Par faiblesse, on entend qu'il serait facile pour un développeur d'introduire un certain type de bug en travaillant avec le code. Votre travail consiste à modifier la conception de manière à ce qu'il soit soit impossible, soit beaucoup moins probable que ce type de bug soit introduit.
-
-Par où commencer ?
-Choisissez l'un des problèmes énumérés :
-
-1. Un jeu pourrait avoir moins de deux joueurs - assurez-vous qu'il en a toujours au moins deux.
-2. Utilisez un langage compilé ou un vérificateur de type statique comme flowtype.
-3. Un jeu pourrait avoir 7 joueurs, assurez-vous qu'il en a au plus 6, ou permettez au moins 7 joueurs.
-4. Un joueur qui se retrouve en prison y reste toujours.
-5. En plus de simplement corriger le bug, essayez de comprendre ce qui ne va pas avec la conception et corrigez la cause profonde.
-6. Le paquet de questions pourrait s'épuiser.
-7. Assurez-vous que cela ne peut pas arriver (un paquet de 1 milliard de questions est de la triche :).
-8. L'introduction de nouvelles catégories de questions semble délicate.
-9. Pourriez-vous vous assurer que tous les endroits ont la question "correcte" et que la distribution est toujours correcte ?
-10. De même, changer la taille du plateau affecte considérablement la distribution des questions.

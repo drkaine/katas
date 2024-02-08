@@ -1,0 +1,52 @@
+Lien => https://kata-log.rocks/bugs-zero-kata
+
+BugsZero Kata
+Practice refactoring code to repel bugs.
+
+Bugs get their way into the code because the design allows it. Bugs are not a fatality and finding ways to improve the design is a very powerful way of keeping them away from our code.
+
+You can think of this dojo like a Poka-Yoke training, understand and fix the root cause of the bugs.
+
+What is the task?
+Trivia from the legacy code retreat is a good codebase to start this with. There are a few bugs in the code and a few weaknesses in the design to fix. By a weakness we mean that it’d be easy for a developer to introduce a certain type of bug while working with the code. Your job is to change the design so that it is either impossible or at least much less likely that that kind of bug would be introduced.
+
+Where to start?
+Pick any of the listed problems
+
+A Game could have less than two players - make sure it always has at least two.
+Use a compiled language or a static type checker like flowtype
+A Game could have 7 players, make it have at most 6.
+or slightly easier allow for 7 players or more
+A player that get’s into prison always stays there
+Other than just fixing the bug, try to understand what’s wrong with the design and fix the root cause
+The deck could run out of questions
+Make sure that can’t happen (a deck with 1 billion questions is cheating :)
+Introducing new categories of questions seems like tricky business.
+Could you make sure all places have the “right” question and that the distribution is always correct?
+Similarly changing the board size greatly affects the questions distribution
+
+
+FR
+
+BugsZero Kata est une pratique de refactoring de code visant à repousser les bugs.
+
+Les bugs s'insinuent dans le code en raison de sa conception. Les bugs ne sont pas une fatalité, et trouver des moyens d'améliorer la conception est un moyen puissant de les éloigner de notre code.
+
+Cette kata peut être comparée à un entraînement Poka-Yoke, où l'objectif est de comprendre et de corriger la cause profonde des bugs.
+
+Quelle est la tâche ?
+La Trivia du code hérité est une bonne base pour commencer. Il y a quelques bugs dans le code et quelques faiblesses de conception à corriger. Par faiblesse, on entend qu'il serait facile pour un développeur d'introduire un certain type de bug en travaillant avec le code. Votre travail consiste à modifier la conception de manière à ce qu'il soit soit impossible, soit beaucoup moins probable que ce type de bug soit introduit.
+
+Par où commencer ?
+Choisissez l'un des problèmes énumérés :
+
+1. Un jeu pourrait avoir moins de deux joueurs - assurez-vous qu'il en a toujours au moins deux.
+2. Utilisez un langage compilé ou un vérificateur de type statique comme flowtype.
+3. Un jeu pourrait avoir 7 joueurs, assurez-vous qu'il en a au plus 6, ou permettez au moins 7 joueurs.
+4. Un joueur qui se retrouve en prison y reste toujours.
+5. En plus de simplement corriger le bug, essayez de comprendre ce qui ne va pas avec la conception et corrigez la cause profonde.
+6. Le paquet de questions pourrait s'épuiser.
+7. Assurez-vous que cela ne peut pas arriver (un paquet de 1 milliard de questions est de la triche :).
+8. L'introduction de nouvelles catégories de questions semble délicate.
+9. Pourriez-vous vous assurer que tous les endroits ont la question "correcte" et que la distribution est toujours correcte ?
+10. De même, changer la taille du plateau affecte considérablement la distribution des questions.
