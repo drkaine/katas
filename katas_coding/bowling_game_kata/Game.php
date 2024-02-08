@@ -14,8 +14,6 @@ class Game
 
 	private bool $spare = false;
 
-	private bool $extra = false;
-
 	public function score(): int
 	{
 		return $this->score;
@@ -69,6 +67,8 @@ class Game
 	private function haveRoll(): bool
 	{
 		if ($this->strike && count($this->frames) < 22) {
+			return true;
+		} elseif ($this->spare && count($this->frames) < 21) {
 			return true;
 		}
 

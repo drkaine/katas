@@ -103,3 +103,40 @@ test('score with 2 last roll are strike and have roll 1 extra time', function ()
 
 	expect($this->game->score())->toBe(49);
 });
+
+test('score with in the last frame the roll is spare and have roll 1 extra roll', function (): void {
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(9);
+	$this->game->roll(1);
+
+	$this->game->roll(10);
+
+	expect($this->game->score())->toBe(30);
+});
