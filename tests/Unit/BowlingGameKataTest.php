@@ -174,3 +174,37 @@ test('Test the rule that a spare is on the same frame', function (): void {
 
 	expect($this->game->score())->toBe(28);
 });
+
+test('Test the rule that a strike is on the first roll', function (): void {
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(0);
+	$this->game->roll(10);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	expect($this->game->score())->toBe(29);
+});

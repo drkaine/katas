@@ -58,7 +58,7 @@ class Game
 	{
 		$last_frame = count($this->frames) !== 0 ? $this->frames[count($this->frames) - 1] : -1;
 
-		if ($this->giveBonus($number_of_pins)) {
+		if ($this->giveBonus($number_of_pins) && ($this->first_roll || count($this->frames) === 19)) {
 			$this->frames[] = 0;
 			$this->strike = 2;
 		}
