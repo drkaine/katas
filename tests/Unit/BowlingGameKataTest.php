@@ -140,3 +140,37 @@ test('score with in the last frame the roll is spare and have roll 1 extra roll'
 
 	expect($this->game->score())->toBe(30);
 });
+
+test('Test the rule that a spare is on the same frame', function (): void {
+	$this->game->roll(1);
+	$this->game->roll(2);
+
+	$this->game->roll(8);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	$this->game->roll(1);
+	$this->game->roll(1);
+
+	expect($this->game->score())->toBe(28);
+});

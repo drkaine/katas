@@ -14,6 +14,8 @@ class Game
 
 	private bool $spare = false;
 
+	private bool $first_roll = true;
+
 	public function score(): int
 	{
 		return $this->score;
@@ -27,6 +29,8 @@ class Game
 			$this->haveBonus($number_of_pins);
 
 			$this->frames[] = $number_of_pins;
+
+			$this->isFirstRoll();
 		}
 	}
 
@@ -59,7 +63,7 @@ class Game
 			$this->strike = 2;
 		}
 
-		if ($this->giveBonus($number_of_pins + $last_frame)) {
+		if ($this->giveBonus($number_of_pins + $last_frame) && ! $this->first_roll) {
 			$this->spare = true;
 		}
 	}
@@ -73,6 +77,11 @@ class Game
 		}
 
 		return (bool) (count($this->frames) < 20);
+	}
+
+	private function isFirstRoll(): void
+	{
+		$this->first_roll = ! $this->first_roll;
 	}
 
 	private function giveBonus(int $number_of_pins): bool
