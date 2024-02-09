@@ -33,17 +33,7 @@ class Game
 
 	public function __construct()
 	{
-		for ($i = 0; 50 > $i; $i++) {
-			$this->popQuestions[] = 'Pop Question ' . $i;
-			$this->scienceQuestions[] = ('Science Question ' . $i);
-			$this->sportsQuestions[] = ('Sports Question ' . $i);
-			$this->rockQuestions[] = $this->createRockQuestion($i);
-		}
-	}
-
-	public function createRockQuestion(int $index): string
-	{
-		return 'Rock Question ' . $index;
+		$this->createQuestions();
 	}
 
 	public function isPlayable()
@@ -110,55 +100,6 @@ class Game
 
 	}
 
-	public function askQuestion(): void
-	{
-		if ($this->currentCategory() === 'Pop') {
-			echoln(array_shift($this->popQuestions));
-		}
-		if ($this->currentCategory() === 'Science') {
-			echoln(array_shift($this->scienceQuestions));
-		}
-		if ($this->currentCategory() === 'Sports') {
-			echoln(array_shift($this->sportsQuestions));
-		}
-		if ($this->currentCategory() === 'Rock') {
-			echoln(array_shift($this->rockQuestions));
-		}
-	}
-
-	public function currentCategory(): string
-	{
-		if (0 === $this->places[$this->currentPlayer]) {
-			return 'Pop';
-		}
-		if (4 === $this->places[$this->currentPlayer]) {
-			return 'Pop';
-		}
-		if (8 === $this->places[$this->currentPlayer]) {
-			return 'Pop';
-		}
-		if (1 === $this->places[$this->currentPlayer]) {
-			return 'Science';
-		}
-		if (5 === $this->places[$this->currentPlayer]) {
-			return 'Science';
-		}
-		if (9 === $this->places[$this->currentPlayer]) {
-			return 'Science';
-		}
-		if (2 === $this->places[$this->currentPlayer]) {
-			return 'Sports';
-		}
-		if (6 === $this->places[$this->currentPlayer]) {
-			return 'Sports';
-		}
-		if (10 === $this->places[$this->currentPlayer]) {
-			return 'Sports';
-		}
-
-		return 'Rock';
-	}
-
 	public function wasCorrectlyAnswered(): bool
 	{
 		if ($this->inPenaltyBox[$this->currentPlayer]) {
@@ -166,9 +107,9 @@ class Game
 				echoln('Answer was correct!!!!');
 				$this->purses[$this->currentPlayer]++;
 				echoln($this->players[$this->currentPlayer] .
-						' now has ' .
-						$this->purses[$this->currentPlayer] .
-						' Gold Coins.');
+					' now has ' .
+					$this->purses[$this->currentPlayer] .
+					' Gold Coins.');
 
 				$winner = $this->didPlayerWin();
 				$this->currentPlayer++;
@@ -218,8 +159,43 @@ class Game
 		return true;
 	}
 
-	public function didPlayerWin(): bool
+	private function currentCategory(): string
+	{
+		return match ($this->places[$this->currentPlayer]) {
+			0, 4, 8 => 'Pop',
+			1, 5, 9 => 'Science',
+			2, 6, 10 => 'Sports',
+			default => 'Rock',
+		};
+	}
+
+	private function askQuestion(): void
+	{
+		match ($this->currentCategory()) {
+			'Pop' => echoln(array_shift($this->popQuestions)),
+			'Science' => echoln(array_shift($this->scienceQuestions)),
+			'Sports' => echoln(array_shift($this->sportsQuestions)),
+			default => echoln(array_shift($this->rockQuestions)),
+		};
+	}
+
+	private function didPlayerWin(): bool
 	{
 		return !(6 === $this->purses[$this->currentPlayer]);
+	}
+
+	private function createQuestion(string $name, int $index): string
+	{
+		return $name . ' Question ' . $index;
+	}
+
+	private function createQuestions(): void
+	{
+		for ($i = 0; 50 > $i; $i++) {
+			$this->popQuestions[] = $this->createQuestion('Pop', $i);
+			$this->scienceQuestions[] = $this->createQuestion('Science', $i);
+			$this->sportsQuestions[] = $this->createQuestion('Sports', $i);
+			$this->rockQuestions[] = $this->createQuestion('Rock', $i);
+		}
 	}
 }
