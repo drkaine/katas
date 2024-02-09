@@ -11,39 +11,28 @@ function echoln($string): void
 
 class Game
 {
-	public $players;
+	public array $players = [];
 
-	public $places;
+	public array $places = [0];
 
-	public $purses;
+	public array $purses = [0];
 
-	public $inPenaltyBox;
+	public array $inPenaltyBox = [0];
 
-	public $popQuestions;
+	public array $popQuestions = [];
 
-	public $scienceQuestions;
+	public array $scienceQuestions = [];
 
-	public $sportsQuestions;
+	public array $sportsQuestions = [];
 
-	public $rockQuestions;
+	public array $rockQuestions = [];
 
-	public $currentPlayer = 0;
+	public int $currentPlayer = 0;
 
-	public $isGettingOutOfPenaltyBox;
+	public bool $isGettingOutOfPenaltyBox;
 
 	public function __construct()
 	{
-
-		$this->players = [];
-		$this->places = [0];
-		$this->purses = [0];
-		$this->inPenaltyBox = [0];
-
-		$this->popQuestions = [];
-		$this->scienceQuestions = [];
-		$this->sportsQuestions = [];
-		$this->rockQuestions = [];
-
 		for ($i = 0; 50 > $i; $i++) {
 			$this->popQuestions[] = 'Pop Question ' . $i;
 			$this->scienceQuestions[] = ('Science Question ' . $i);
