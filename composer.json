@@ -19,5 +19,8 @@
             "Katas\\": "katas_coding/",
             "Tests\\": "tests/"
         }
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.6"
     }
 }
