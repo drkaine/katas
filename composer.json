@@ -1,7 +1,9 @@
 {
     "require": {
+        "friendsofphp/php-cs-fixer": "^3.49",
+        "nesbot/carbon": "^3.0",
         "pestphp/pest": "^2.33",
-        "friendsofphp/php-cs-fixer": "^3.49"
+        "ramsey/uuid": "^4.7"
     },
     "config": {
         "optimize-autoloader": true,
