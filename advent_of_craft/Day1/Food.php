@@ -18,8 +18,29 @@ class Food
 
 	public function isEdible(Carbon $now): bool
 	{
-		return $this->expirationDate > $now &&
-			$this->approvedForConsumption &&
-			null !== $this->inspectorId;
+		if ($this->isEpired($now)) {
+			return false;
+		}
+
+		if ($this->hasNotBeenInspected()) {
+			return false;
+		}
+
+		return $this->canBeConsummed();
+	}
+
+	private function isEpired(Carbon $now): bool
+	{
+		return $this->expirationDate <= $now;
+	}
+
+	private function hasNotBeenInspected(): bool
+	{
+		return null === $this->inspectorId;
+	}
+
+	private function canBeConsummed(): bool
+	{
+		return $this->approvedForConsumption;
 	}
 }
