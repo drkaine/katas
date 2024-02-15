@@ -7,7 +7,7 @@ use Advent\Day7\Dependancies\Emailer;
 use Advent\Day7\Dependancies\ProjectBuilder;
 use Advent\Day7\Dependancies\TestStatus;
 use Advent\Day7\Pipeline;
-use Tests\Unit\CapturingLogger;
+use Tests\Unit\Day7\CapturingLogger;
 
 describe('Pipeline Tests with sendEmailSummary at true', function (): void {
 
