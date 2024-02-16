@@ -4,14 +4,14 @@ declare(strict_types = 1);
 
 namespace Advent\Day4;
 
-use DateTime;
+use Carbon\Carbon;
 
 class Comment
 {
 	public function __construct(
 		public readonly string $text,
 		public readonly string $author,
-		public readonly DateTime $creationDate
+		public readonly Carbon $creationDate
 	) {
 	}
 

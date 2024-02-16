@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Advent\Day4;
 
-use DateTime;
+use Carbon\Carbon;
 use Exception;
 
 class Article
@@ -18,7 +18,7 @@ class Article
 
 	public function addComment(string $text, string $author): void
 	{
-		$this->addCommentWithCreationDate($text, $author, new DateTime);
+		$this->addCommentWithCreationDate($text, $author, new Carbon);
 	}
 
 	public function getComments(): array
@@ -29,7 +29,7 @@ class Article
 	private function addCommentWithCreationDate(
 		string $text,
 		string $author,
-		DateTime $creationDate
+		Carbon $creationDate
 	): void {
 		$otherComment = new Comment($text, $author, $creationDate);
 
