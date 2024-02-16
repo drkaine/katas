@@ -16,8 +16,6 @@ class FizzBuzz
 
 	private int $buzz = 5;
 
-	private int $fizzBuzz = 15;
-
 	private int $modulo = 0;
 
 	private string $outOfRange = 'Input is out of range';
@@ -42,7 +40,7 @@ class FizzBuzz
 
 	private function convertResult(int $input): string | int
 	{
-		if ($this->is($input, $this->fizzBuzz)) {
+		if ($this->is($input, $this->fizz * $this->buzz)) {
 			return $this->stringFizz . $this->stringBuzz;
 		}
 
