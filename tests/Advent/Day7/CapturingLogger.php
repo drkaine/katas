@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Tests\Unit\Day7;
+namespace Tests\Advent\Day7;
 
 use Advent\Day7\Dependancies\Logger;
 

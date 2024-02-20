@@ -13,7 +13,7 @@ test('lock downr', function (): void {
 	$actual = ob_get_contents();
 	ob_end_clean();
 
-	$expected = file_get_contents('./tests/Unit/datas_tests/approved.txt');
+	$expected = file_get_contents('./tests/Katas/datas_tests/approved.txt');
 
 	expect($actual)->toBe($expected);
 });

@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Tests\Unit\Day5;
+namespace Tests\Advent\Day5;
 
 use Advent\Day5\Person;
 use Advent\Day5\Pet;

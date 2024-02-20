@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-use Tests\Unit\Day5\PopulationTesting;
+use Tests\Advent\Day5\PopulationTesting;
 
 describe('population', function (): void {
 
