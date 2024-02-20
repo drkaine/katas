@@ -6,6 +6,8 @@ namespace Advent\Day3;
 
 class Population
 {
+	private array $youngestPetAgeArray = [];
+
 	public function __construct(
 		public array $persons,
 	) {
@@ -15,23 +17,24 @@ class Population
 	{
 		$this->getYoungestPetsPerson();
 
-		$array = [];
+		array_map([$this, 'addYougestPetAge'], $this->persons);
+		asort($this->youngestPetAgeArray);
 
-		foreach ($this->persons as $person) {
-			$array[$person->firstName] = $person->youngestPetAge;
-		}
-
-		asort($array);
-
-		return array_key_first($array);
+		return array_key_first($this->youngestPetAgeArray);
 	}
 
 	private function getYoungestPetsPerson(): void
 	{
-		$get = function (Person $person) {
-			return $person->getYoungestPet();
-		};
+		array_map([$this, 'getYoungestPet'], $this->persons);
+	}
 
-		array_map($get, $this->persons);
+	private function getYoungestPet(Person $person): void
+	{
+		$person->getYoungestPet();
+	}
+
+	private function addYougestPetAge(Person $person): void
+	{
+		$this->youngestPetAgeArray[$person->firstName] = $person->youngestPetAge;
 	}
 }

@@ -16,10 +16,13 @@ class Person
 
 	public function getYoungestPet(): void
 	{
-		foreach ($this->pets as $pet) {
-			if ($pet->age < $this->youngestPetAge) {
-				$this->youngestPetAge = $pet->age;
-			}
+		array_map([$this, 'getYoungest'], $this->pets);
+	}
+
+	private function getYoungest(Pet $pet): void
+	{
+		if ($pet->age < $this->youngestPetAge) {
+			$this->youngestPetAge = $pet->age;
 		}
 	}
 }
