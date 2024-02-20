@@ -8,56 +8,92 @@ use Advent\Day7\Dependancies\Config;
 use Advent\Day7\Dependancies\Emailer;
 use Advent\Day7\Dependancies\Logger;
 use Advent\Day7\Dependancies\Project;
+use Advent\Day7\Dependancies\TestStatus;
 
 class Pipeline
 {
+	private readonly bool $mailingAvailable;
+
 	public function __construct(
 		private readonly Config $config,
 		private readonly Emailer $emailer,
 		private readonly Logger $log,
 	) {
+		$this->mailingAvailable = $this->config->sendEmailSummary();
 	}
 
 	public function run(Project $project): void
 	{
-		if ($project->hasTests()) {
-			if ('success' === $project->runTests()) {
-				$this->log->info('Tests passed');
-				$testsPassed = true;
-			} else {
-				$this->log->error('Tests failed');
-				$testsPassed = false;
-			}
-		} else {
-			$this->log->info('No tests');
-			$testsPassed = true;
-		}
+		$testsPassed = $this->testPassed($project);
+
+		$deploySuccessful = $this->deploySuccessful($project);
+
+		$this->logForTestsStatus($project);
 
 		if ($testsPassed) {
-			if ('success' === $project->deploy()) {
-				$this->log->info('Deployment successful');
-				$deploySuccessful = true;
-			} else {
-				$this->log->error('Deployment failed');
-				$deploySuccessful = false;
-			}
-		} else {
-			$deploySuccessful = false;
+			$this->logForDeploymentStatus($deploySuccessful);
 		}
 
-		if ($this->config->sendEmailSummary()) {
+		if ($this->mailingAvailable) {
 			$this->log->info('Sending email');
-			if ($testsPassed) {
-				if ($deploySuccessful) {
-					$this->emailer->send('Deployment completed successfully');
-				} else {
-					$this->emailer->send('Deployment failed');
-				}
-			} else {
-				$this->emailer->send('Tests failed');
-			}
-		} else {
-			$this->log->info('Email disabled');
+			$this->logForEmailingTests($testsPassed, $deploySuccessful);
+
+			return;
 		}
+		$this->log->info('Email disabled');
+	}
+
+	private function logForEmailingTests(bool $testsPassed, bool $deploySuccessful): void
+	{
+		if ($testsPassed) {
+			$this->logForDeploymentEding($deploySuccessful);
+
+			return;
+		}
+		$this->emailer->send('Tests failed');
+
+	}
+
+	private function logForDeploymentEding(bool $deploySuccessful): void
+	{
+		if ($deploySuccessful) {
+			$this->emailer->send('Deployment completed successfully');
+
+			return;
+		}
+		$this->emailer->send('Deployment failed');
+	}
+
+	private function logForDeploymentStatus(bool $deploySuccessful): void
+	{
+		if ($deploySuccessful) {
+			$this->log->info('Deployment successful');
+
+			return;
+		}
+		$this->log->error('Deployment failed');
+	}
+
+	private function logForTestsStatus(Project $project): void
+	{
+		match ($project->getTestStatus()) {
+			TestStatus::PassingTests => $this->log->info('Tests passed'),
+			TestStatus::FailingTests => $this->log->error('Tests failed'),
+			TestStatus::NoTests => $this->log->info('No tests'),
+		};
+	}
+
+	private function deploySuccessful(Project $project): bool
+	{
+		if ($this->testPassed($project)) {
+			return (bool) ('success' === $project->deploy());
+		}
+
+		return false;
+	}
+
+	private function testPassed(Project $project): bool
+	{
+		return $project->getTestStatus() !== TestStatus::FailingTests;
 	}
 }

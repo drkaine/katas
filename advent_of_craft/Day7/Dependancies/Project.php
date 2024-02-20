@@ -31,4 +31,9 @@ class Project
 	{
 		return $this->buildsSuccessfully ? 'success' : 'failure';
 	}
+
+	public function getTestStatus(): TestStatus
+	{
+		return $this->testStatus;
+	}
 }
