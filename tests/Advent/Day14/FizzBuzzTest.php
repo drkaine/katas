@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-use Advent\Day10\FizzBuzz;
+use Advent\Day14\FizzBuzz;
 
 describe('FizzBuzz should return', function (): void {
 	beforeEach(function (): void {
