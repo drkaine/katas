@@ -4,7 +4,8 @@
         "friendsofphp/php-cs-fixer": "^3.49",
         "nesbot/carbon": "^3.0",
         "pestphp/pest": "^2.33",
-        "ramsey/uuid": "^4.7"
+        "ramsey/uuid": "^4.7",
+        "innmind/immutable": "^4.14"
     },
     "config": {
         "optimize-autoloader": true,
