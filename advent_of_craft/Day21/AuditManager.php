@@ -8,20 +8,14 @@ use Carbon\Carbon;
 
 class AuditManager
 {
-	private $maxEntriesPerFile;
-
-	private $directoryName;
-
-	private $fileSystem;
-
-	public function __construct($maxEntriesPerFile, $directoryName, $fileSystem)
-	{
-		$this->maxEntriesPerFile = $maxEntriesPerFile;
-		$this->directoryName = $directoryName;
-		$this->fileSystem = $fileSystem;
+	public function __construct(
+		private int $maxEntriesPerFile,
+		private string $directoryName,
+		private FileSystem $fileSystem
+	) {
 	}
 
-	public function addRecord($visitorName, Carbon $timeOfVisit): void
+	public function addRecord(string $visitorName, Carbon $timeOfVisit): void
 	{
 		$filePaths = $this->fileSystem->getFiles($this->directoryName);
 		$sorted = $this->sortByIndex($filePaths);
@@ -50,7 +44,7 @@ class AuditManager
 		}
 	}
 
-	private function sortByIndex($filePaths)
+	private function sortByIndex(array $filePaths): array
 	{
 		sort($filePaths);
 
