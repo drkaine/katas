@@ -5,7 +5,6 @@ declare(strict_types = 1);
 use Advent\Day12\Casual;
 use Advent\Day12\Formal;
 use Advent\Day12\Greeter;
-use Advent\Day12\Hello;
 use Advent\Day12\Intimate;
 
 describe('Greeter', function (): void {
