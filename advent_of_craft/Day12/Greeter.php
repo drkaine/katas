@@ -6,18 +6,16 @@ namespace Advent\Day12;
 
 class Greeter
 {
-	private ?GreeterInterface $formality = null;
+	private GreeterInterface $formality;
 
-	private string $hello = 'Hello.';
+	public function __construct()
+	{
+		$this->formality = new Hello;
+	}
 
 	public function greet(): string
 	{
-		if (null === $this->formality) {
-			return $this->hello;
-		}
-
 		return $this->formality->greet();
-
 	}
 
 	public function setFormality(GreeterInterface $formality): void
