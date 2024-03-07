@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Advent\Day24;
+namespace Tests\Advent\Day24;
 
 use Exception;
 
