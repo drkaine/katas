@@ -2,50 +2,33 @@
 
 declare(strict_types = 1);
 
-use Advent\Day13\Article;
 use Advent\Day13\CommentAlreadyExistException;
+use Tests\Advent\Day13\ArticleBuilder;
 
 describe('Article in a blog', function (): void {
 	beforeEach(function (): void {
-		$this->article = new Article(
-			'Lorem Ipsum',
-			'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
-		);
-
 		$this->commentText = 'Amazing article !!!';
 
 		$this->author = 'Pablo Escobar';
+		$this->articleBuilder = new ArticleBuilder;
 	});
 
 	test('should add comment in an article', function (): void {
-		$this->article->addComment($this->commentText, $this->author);
+		expect($this->articleBuilder->countOfComments())->toBe(1);
 
-		expect($this->article->getComments())->toHaveLength(1);
-
-		$comment = $this->article->getComments()[0];
-
-		expect($comment->text)->toBe($this->commentText);
-		expect($comment->author)->toBe($this->author);
+		expect($this->articleBuilder->getCommentText(0))->toBe($this->commentText);
+		expect($this->articleBuilder->getCommentAuthor(0))->toBe($this->author);
 	});
 
-	test('should add comment in an article containing already one', function (): void {
-		$newComment = 'Finibus Bonorum et Malorum';
-		$newAuthor = 'Al Capone';
+	test('should contain more than one comment', function (): void {
+		$this->articleBuilder->addAnOtherComment();
 
-		$this->article->addComment($this->commentText, $this->author);
-		$this->article->addComment($newComment, $newAuthor);
-
-		$lastComment = $this->article->getComments()[1];
-
-		expect($lastComment->text)->toBe($newComment);
-		expect($lastComment->author)->toBe($newAuthor);
+		expect($this->articleBuilder->countOfComments())->toBe(2);
 	});
 
 	test('should fail when adding existing comment', function (): void {
-		$this->article->addComment($this->commentText, $this->author);
-
 		expect(function (): void {
-			$this->article->addComment($this->commentText, $this->author);
+			$this->articleBuilder->addComment();
 		})->toThrow(CommentAlreadyExistException::class, 'Comment already exists');
 	});
 
