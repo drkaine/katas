@@ -8,21 +8,35 @@ class Greeter
 {
 	private ?string $formality = null;
 
+	private string $hello = 'Hello.';
+
+	private string $goodEveningSir = 'Good evening, sir.';
+
+	private string $supBro = 'Sup bro?';
+
+	private string $helloDarling = 'Hello Darling!';
+
+	private string $formalCondition = 'formal';
+
+	private string $casualCondition = 'casual';
+
+	private string $intimateCondition = 'intimate';
+
 	public function greet(): string
 	{
 		if (null === $this->formality) {
-			return 'Hello.';
+			return $this->hello;
 		}
 
-		if ('formal' === $this->formality) {
-			return 'Good evening, sir.';
-		} elseif ('casual' === $this->formality) {
-			return 'Sup bro?';
-		} elseif ('intimate' === $this->formality) {
-			return 'Hello Darling!';
+		if ($this->formalCondition === $this->formality) {
+			return $this->goodEveningSir;
+		} elseif ($this->casualCondition === $this->formality) {
+			return $this->supBro;
+		} elseif ($this->intimateCondition === $this->formality) {
+			return $this->helloDarling;
 		}
 
-		return 'Hello.';
+		return $this->hello;
 
 	}
 
