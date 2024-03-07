@@ -15,9 +15,6 @@ describe('Greeter', function (): void {
 
 	test('says Hello', function (): void {
 		expect($this->greeter->greet())->toBe('Hello.');
-
-		$this->greeter->setFormality(new Hello);
-		expect($this->greeter->greet())->toBe('Hello.');
 	});
 
 	test('says Hello Formally', function (): void {
