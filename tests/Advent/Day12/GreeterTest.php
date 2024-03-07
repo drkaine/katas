@@ -2,7 +2,11 @@
 
 declare(strict_types = 1);
 
+use Advent\Day12\Casual;
+use Advent\Day12\Formal;
 use Advent\Day12\Greeter;
+use Advent\Day12\Hello;
+use Advent\Day12\Intimate;
 
 describe('Greeter', function (): void {
 	beforeEach(function (): void {
@@ -11,20 +15,23 @@ describe('Greeter', function (): void {
 
 	test('says Hello', function (): void {
 		expect($this->greeter->greet())->toBe('Hello.');
+
+		$this->greeter->setFormality(new Hello);
+		expect($this->greeter->greet())->toBe('Hello.');
 	});
 
 	test('says Hello Formally', function (): void {
-		$this->greeter->setFormality('formal');
+		$this->greeter->setFormality(new Formal);
 		expect($this->greeter->greet())->toBe('Good evening, sir.');
 	});
 
 	test('says Hello Casually', function (): void {
-		$this->greeter->setFormality('casual');
+		$this->greeter->setFormality(new Casual);
 		expect($this->greeter->greet())->toBe('Sup bro?');
 	});
 
 	test('says Hello Intimately', function (): void {
-		$this->greeter->setFormality('intimate');
+		$this->greeter->setFormality(new Intimate);
 		expect($this->greeter->greet())->toBe('Hello Darling!');
 	});
 });
