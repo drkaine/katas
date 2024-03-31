@@ -3,6 +3,7 @@
 declare(strict_types = 1);
 
 use Advent\Day14\FizzBuzz;
+use Innmind\Immutable\Maybe;
 
 describe('FizzBuzz should return', function (): void {
 	beforeEach(function (): void {
@@ -27,7 +28,7 @@ describe('FizzBuzz should return', function (): void {
 	});
 
 	test('its representation', function (int $input, $output): void {
-		expect($this->fizzBuzz->fizzBuzz($input))->toBe($output);
+		expect($this->fizzBuzz->fizzBuzz($input))->toEqual(Maybe::just($output));
 	})->with('validInputOutput');
 
 	dataset('invalidInputOutput', function () {
@@ -39,9 +40,6 @@ describe('FizzBuzz should return', function (): void {
 	});
 
 	test('an error for numbers out of range like', function (int $input): void {
-		$fizzbuzz = new FizzBuzz;
-		expect(function () use ($fizzbuzz, $input): void {
-			$fizzbuzz->fizzBuzz($input);
-		})->toThrow(Exception::class, 'Input is out of range');
+		expect($this->fizzBuzz->fizzBuzz($input))->toEqual(Maybe::nothing());
 	})->with('invalidInputOutput');
 });

@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Advent\Day14;
 
-use Exception;
+use Innmind\Immutable\Maybe;
 
 class FizzBuzz
 {
@@ -18,14 +18,11 @@ class FizzBuzz
 
 	private int $fizzBuzz = 15;
 
-	public function fizzbuzz(int $input): string | int
+	public function fizzbuzz(int $input): Maybe
 	{
 		return match (true) {
-			$this->isOutOfRange($input) => throw new Exception('Input is out of range'),
-			$this->is($this->fizzBuzz, $input) => 'FizzBuzz',
-			$this->is($this->fizz, $input) => 'Fizz',
-			$this->is($this->buzz, $input) => 'Buzz',
-			default => $input,
+			$this->isOutOfRange($input) => Maybe::nothing(),
+			default => $this->convert($input),
 		};
 	}
 
@@ -37,5 +34,15 @@ class FizzBuzz
 	public function isOutOfRange(int $input): bool
 	{
 		return $input <= $this->min || $input > $this->max;
+	}
+
+	private function convert(int $input): Maybe
+	{
+		return match (true) {
+			$this->is($this->fizzBuzz, $input) => Maybe::just('FizzBuzz'),
+			$this->is($this->fizz, $input) => Maybe::just('Fizz'),
+			$this->is($this->buzz, $input) => Maybe::just('Buzz'),
+			default => Maybe::just($input),
+		};
 	}
 }
