@@ -9,12 +9,12 @@ use InvalidArgumentException;
 class DocumentTemplateType
 {
 	public function __construct(
-		private $documentType,
+		private string $documentType,
 		private RecordType $recordType,
 	) {
 	}
 
-	public static function fromDocumentTypeAndRecordType($documentType, $recordType)
+	public static function fromDocumentTypeAndRecordType(string $documentType, RecordType $recordType)
 	{
 		foreach (self::getConstants() as $dtt) {
 			if (strcasecmp($dtt->getDocumentType(), $documentType) === 0 &&
@@ -29,17 +29,17 @@ class DocumentTemplateType
 		throw new InvalidArgumentException('Invalid Document template type or record type');
 	}
 
-	private function getRecordType()
+	private function getRecordType(): RecordType
 	{
 		return $this->recordType;
 	}
 
-	private function getDocumentType()
+	private function getDocumentType(): string
 	{
 		return $this->documentType;
 	}
 
-	private static function getConstants()
+	private static function getConstants(): array
 	{
 		return [
 			new self('DEER', RecordType::INDIVIDUAL_PROSPECT),
