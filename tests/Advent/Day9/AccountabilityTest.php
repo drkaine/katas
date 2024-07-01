@@ -25,7 +25,7 @@ describe('Client should', function (): void {
 	test('give the statement and the total amount', function (): void {
 		expect($this->client->getTotalAmount())->toEqualWithDelta(130.97, 2);
 
-		expect(trim($this->statement))->toEqual($this->statementWanted);
+		expect(trim($this->statement))->toBe($this->statementWanted);
 	});
 
 	test('not cumul the total amount with multiple statement', function (): void {

@@ -28,7 +28,7 @@ describe('FizzBuzz should return', function (): void {
 	});
 
 	test('its representation', function (int $input, $output): void {
-		expect($this->fizzBuzz->fizzBuzz($input))->toEqual(Maybe::just($output));
+		expect($this->fizzBuzz->fizzBuzz($input))->toBe(Maybe::just($output));
 	})->with('validInputOutput');
 
 	dataset('invalidInputOutput', function () {
@@ -40,6 +40,6 @@ describe('FizzBuzz should return', function (): void {
 	});
 
 	test('an error for numbers out of range like', function (int $input): void {
-		expect($this->fizzBuzz->fizzBuzz($input))->toEqual(Maybe::nothing());
+		expect($this->fizzBuzz->fizzBuzz($input))->toBe(Maybe::nothing());
 	})->with('invalidInputOutput');
 });

@@ -29,7 +29,7 @@ describe('Pipeline Tests with sendEmailSummary at true', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'INFO: Tests passed',
 				'INFO: Deployment successful',
@@ -48,7 +48,7 @@ describe('Pipeline Tests with sendEmailSummary at true', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'ERROR: Tests failed',
 				'INFO: Sending email',
@@ -66,7 +66,7 @@ describe('Pipeline Tests with sendEmailSummary at true', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'INFO: No tests',
 				'INFO: Deployment successful',
@@ -85,7 +85,7 @@ describe('Pipeline Tests with sendEmailSummary at true', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'INFO: Tests passed',
 				'ERROR: Deployment failed',
@@ -104,7 +104,7 @@ describe('Pipeline Tests with sendEmailSummary at true', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'INFO: No tests',
 				'ERROR: Deployment failed',
@@ -136,7 +136,7 @@ describe('Pipeline Tests with sendEmailSummary at false', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'INFO: Tests passed',
 				'INFO: Deployment successful',
@@ -155,7 +155,7 @@ describe('Pipeline Tests with sendEmailSummary at false', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'INFO: No tests',
 				'INFO: Deployment successful',
@@ -174,7 +174,7 @@ describe('Pipeline Tests with sendEmailSummary at false', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'ERROR: Tests failed',
 				'INFO: Email disabled',
@@ -192,7 +192,7 @@ describe('Pipeline Tests with sendEmailSummary at false', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'INFO: Tests passed',
 				'ERROR: Deployment failed',
@@ -211,7 +211,7 @@ describe('Pipeline Tests with sendEmailSummary at false', function (): void {
 
 		$this->pipeline->run($project);
 
-		expect($this->log->loggedLines())->toEqual(
+		expect($this->log->loggedLines())->toBe(
 			[
 				'INFO: No tests',
 				'ERROR: Deployment failed',

@@ -27,7 +27,7 @@ describe('RomanNumeral conversion', function (): void {
 
 	test('generates roman for numbers', function ($number, $expectedRoman): void {
 		$result = $this->romanNumerals->convert($number);
-		expect($result)->toEqual($expectedRoman);
+		expect($result)->toBe($expectedRoman);
 	})->with('RomanNumeral');
 
 	test('fails for any number out of range', function (): void {
