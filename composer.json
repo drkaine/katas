@@ -17,7 +17,6 @@
     },
     "autoload": {
         "psr-4": {
-            "Advent\\": "advent_of_craft/",
             "Katas\\": "katas_coding/",
             "Tests\\": "tests/"
         }

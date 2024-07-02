@@ -381,7 +381,6 @@ return $config->
 		Finder::create()->
 		// ->exclude('folder-to-exclude') // si vous voulez exclure certains dossiers, vous pouvez le faire comme ceci !
 			in([
-				__DIR__ . '/advent_of_craft',
 				__DIR__ . '/katas_coding',
 				__DIR__ . '/tests',
 			])->
